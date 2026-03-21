@@ -951,14 +951,8 @@
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Cinemachine.Editor">
-      <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.Cinemachine.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.UnifiedRayTracing.Runtime">
       <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.UnifiedRayTracing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Cinemachine">
-      <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
@@ -1061,6 +1055,14 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{8c016e67-a1b6-0189-c77a-a53185be81cf}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Cinemachine.Editor.csproj">
+      <Project>{dc040bd8-5e11-a7c0-7115-be3f128eb8cc}</Project>
+      <Name>Unity.Cinemachine.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Cinemachine.csproj">
+      <Project>{ce6eb3c8-1958-c605-b46c-98216a135a8e}</Project>
+      <Name>Unity.Cinemachine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
