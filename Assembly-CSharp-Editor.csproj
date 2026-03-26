@@ -951,14 +951,8 @@
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Cinemachine.Editor">
-      <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.Cinemachine.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.UnifiedRayTracing.Runtime">
       <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.UnifiedRayTracing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Cinemachine">
-      <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:\Users\Dung\Computer Graphics\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
