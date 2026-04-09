@@ -10,8 +10,8 @@ public class FadeOnBlock : MonoBehaviour
     [Range(0.01f, 20f)] public float fadeSpeed = 8f;
 
     // lưu renderer + material gốc
-    private Dictionary<Renderer, Material[]> originalMats = new Dictionary<Renderer, Material[]>();
-    private HashSet<Renderer> currentFaded = new HashSet<Renderer>();
+    private Dictionary<Renderer, Material[]> _originalMats = new Dictionary<Renderer, Material[]>();
+    private HashSet<Renderer> _currentFaded = new HashSet<Renderer>();
 
     void Update()
     {
@@ -34,16 +34,16 @@ public class FadeOnBlock : MonoBehaviour
                 newFaded.Add(r);
 
                 // nếu chưa từng fade
-                if (!originalMats.ContainsKey(r))
+                if (!_originalMats.ContainsKey(r))
                 {
-                    originalMats[r] = r.materials;
+                    _originalMats[r] = r.materials;
                     ApplyFadeMaterial(r);
                 }
             }
         }
 
         // reset những object không còn bị che
-        foreach (var r in currentFaded)
+        foreach (var r in _currentFaded)
         {
             if (!newFaded.Contains(r))
             {
@@ -51,7 +51,7 @@ public class FadeOnBlock : MonoBehaviour
             }
         }
 
-        currentFaded = newFaded;
+        _currentFaded = newFaded;
     }
 
     void ApplyFadeMaterial(Renderer r)
@@ -68,10 +68,10 @@ public class FadeOnBlock : MonoBehaviour
 
     void RestoreMaterial(Renderer r)
     {
-        if (originalMats.ContainsKey(r))
+        if (_originalMats.ContainsKey(r))
         {
-            r.materials = originalMats[r];
-            originalMats.Remove(r);
+            r.materials = _originalMats[r];
+            _originalMats.Remove(r);
         }
     }
 }
