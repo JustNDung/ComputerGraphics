@@ -16,6 +16,12 @@ public class CameraTrigger : MonoBehaviour
     private bool _isPlayerInside = false;
     private bool _isFocused = false;
     private bool _isTransitioning = false;
+    private CinemachineBrain brain;
+
+    private void Start()
+    {
+        brain = Camera.main.GetComponent<CinemachineBrain>();
+    }
 
     void Update()
     {
@@ -46,7 +52,11 @@ public class CameraTrigger : MonoBehaviour
         // 👉 khóa player (tuỳ chọn)
         if (playerController != null)
             playerController.enabled = false;
-
+        
+        // 👉 lấy thời gian blend thật
+        float blendTime = brain.DefaultBlend.Time;
+        yield return new WaitForSeconds(blendTime);
+        
         _isFocused = true;
         _isTransitioning = false;
         playerController.gameObject.SetActive(false);
