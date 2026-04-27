@@ -2045,6 +2045,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 135756642000475821, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: cursorLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 135756642000475821, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: cursorInputForLook
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.25
@@ -3741,8 +3749,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1112679875}
   - component: {fileID: 1112679876}
+  - component: {fileID: 1112679877}
   m_Layer: 0
-  m_Name: QuestPanel
+  m_Name: QuestPanelUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3777,7 +3786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
   m_PanelSettings: {fileID: 11400000, guid: c5e9bec0d96186b4589fb2ea0b5acfaf, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: f6b894d9515dc9f46a8637b35bfc8ef7, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: 508a8132ae0cdcf49bbac984e7036436, type: 3}
   m_SortingOrder: 0
   m_Position: 0
   m_WorldSpaceSizeMode: 1
@@ -3786,6 +3795,21 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &1112679877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112679874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa61108685324adcb26b638bb8d90431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_Toolkit.Quest.QuestPanelUI
+  panelWidth: 420
+  animationMs: 300
+  hoverEdgeSize: 80
 --- !u!1 &1124575932
 GameObject:
   m_ObjectHideFlags: 0
@@ -5355,6 +5379,7 @@ GameObject:
   - component: {fileID: 1817560360}
   - component: {fileID: 1817560362}
   - component: {fileID: 1817560361}
+  - component: {fileID: 1817560363}
   m_Layer: 0
   m_Name: TriggerZone
   m_TagString: Untagged
@@ -5413,8 +5438,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.899372, y: 3.1451266, z: 1.514843}
-  m_Center: {x: 0.35707664, y: 1.0725633, z: 0.96725655}
+  m_Size: {x: 5.899372, y: 3.1451266, z: 3.0741062}
+  m_Center: {x: 0.35707664, y: 1.0725633, z: 0.18762493}
+--- !u!114 &1817560363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817560359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c921ae01076a43cb8c6a978514dc2d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerZone.TriggerZone
+  zoneType: 1
 --- !u!1001 &1829148270
 PrefabInstance:
   m_ObjectHideFlags: 0
