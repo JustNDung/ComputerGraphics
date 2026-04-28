@@ -12,6 +12,13 @@ public class QuestPanelUIController : MonoBehaviour
     [SerializeField] private float hoverEdge = 24f;
     [SerializeField] private int animationMs = 240;
 
+    [Header("Auto Scale With Font")]
+    [SerializeField] private Font uiFont;
+    [SerializeField] private int baseFontSize = 14;
+    [SerializeField] private float widthPerFontSize = 22f;   // panel rộng thêm theo font
+    [SerializeField] private float minWidth = 420f;
+    [SerializeField] private float maxWidth = 760f;
+
     [Header("Theme")]
     [SerializeField] private Color cardColor = new Color(1f,1f,1f,0.06f);
     [SerializeField] private Color cardHoverColor = new Color(1f,1f,1f,0.10f);
@@ -32,11 +39,11 @@ public class QuestPanelUIController : MonoBehaviour
 
     private bool _isOpen;
     private ZoneType _currentZone = ZoneType.None;
-
-    // dùng object reference tránh bug questId trùng
     private QuestInstance _expandedQuest;
 
-    #region Unity
+    private int TitleSize => Mathf.RoundToInt(baseFontSize * 1.28f);
+    private int BodySize => baseFontSize;
+    private int SmallSize => Mathf.RoundToInt(baseFontSize * 0.85f);
 
     private void Awake()
     {
@@ -66,7 +73,6 @@ public class QuestPanelUIController : MonoBehaviour
         SetupUI();
         BindUI();
         BindQuestEvents();
-
         RefreshUI();
     }
 
@@ -75,10 +81,6 @@ public class QuestPanelUIController : MonoBehaviour
         if (QuestManager.Instance != null)
             QuestManager.Instance.OnQuestUpdated -= RefreshUI;
     }
-
-    #endregion
-
-    #region Setup
 
     private void SetupUI()
     {
@@ -91,8 +93,29 @@ public class QuestPanelUIController : MonoBehaviour
         _openBtn = _root.Q<Button>("quest-btn");
         _closeBtn = _root.Q<Button>("close-btn");
 
+        ApplyTypography();
+        AutoResizePanel();
+
         _panel.style.right = -panelWidth;
         _overlay.style.display = DisplayStyle.None;
+    }
+
+    private void ApplyTypography()
+    {
+        if (uiFont != null)
+            _panel.style.unityFont = uiFont;
+
+        _panel.style.fontSize = baseFontSize;
+    }
+
+    private void AutoResizePanel()
+    {
+        float dynamicWidth = 280f + (baseFontSize * widthPerFontSize);
+        panelWidth = Mathf.Clamp(dynamicWidth, minWidth, maxWidth);
+
+        _panel.style.width = panelWidth;
+        _panel.style.minWidth = minWidth;
+        _panel.style.maxWidth = maxWidth;
     }
 
     private void BindUI()
@@ -121,24 +144,17 @@ public class QuestPanelUIController : MonoBehaviour
             QuestManager.Instance.OnQuestUpdated += RefreshUI;
     }
 
-    #endregion
-
-    #region Zone
-
     private void OnZoneEnter(TriggerZoneEnterMessage msg)
     {
         _currentZone = msg.zoneType;
-
         AutoExpandZoneQuest();
-
         OpenPanel();
         RefreshUI();
     }
 
     private void OnZoneExit(TriggerZoneExitMessage msg)
     {
-        if (msg.zoneType != _currentZone)
-            return;
+        if (msg.zoneType != _currentZone) return;
 
         _currentZone = ZoneType.None;
         _expandedQuest = null;
@@ -159,10 +175,6 @@ public class QuestPanelUIController : MonoBehaviour
             }
         }
     }
-
-    #endregion
-
-    #region Panel
 
     private void TogglePanel()
     {
@@ -191,10 +203,6 @@ public class QuestPanelUIController : MonoBehaviour
 
         _overlay.style.display = DisplayStyle.None;
     }
-
-    #endregion
-
-    #region Render
 
     private void RefreshUI()
     {
@@ -225,12 +233,9 @@ public class QuestPanelUIController : MonoBehaviour
         bool expanded = (_expandedQuest == quest);
 
         VisualElement card = CreateCard();
-
         RegisterHover(card);
 
-        VisualElement header = CreateHeader(quest, expanded);
-        card.Add(header);
-
+        card.Add(CreateHeader(quest, expanded));
         DrawProgressBar(card, quest);
 
         if (expanded)
@@ -243,16 +248,11 @@ public class QuestPanelUIController : MonoBehaviour
         _scroll.Add(card);
     }
 
-    #endregion
-
-    #region Card
-
     private VisualElement CreateCard()
     {
         VisualElement card = new VisualElement();
 
         card.style.marginBottom = 12;
-
         card.style.paddingLeft = 14;
         card.style.paddingRight = 14;
         card.style.paddingTop = 12;
@@ -260,10 +260,10 @@ public class QuestPanelUIController : MonoBehaviour
 
         card.style.backgroundColor = cardColor;
 
-        card.style.borderBottomLeftRadius = 10;
-        card.style.borderBottomRightRadius = 10;
         card.style.borderTopLeftRadius = 10;
         card.style.borderTopRightRadius = 10;
+        card.style.borderBottomLeftRadius = 10;
+        card.style.borderBottomRightRadius = 10;
 
         return card;
     }
@@ -292,22 +292,21 @@ public class QuestPanelUIController : MonoBehaviour
         row.style.alignItems = Align.Center;
 
         Label title = new Label(
-            (expanded ? "▼ " : "▶ ") +
-            quest.data.title
-        );
+            (expanded ? "▼ " : "▶ ") + quest.data.title);
 
-        title.style.fontSize = 18;
-        title.style.unityFontStyleAndWeight =
-            FontStyle.Bold;
+        title.style.fontSize = TitleSize;
+        title.style.unityFontStyleAndWeight = FontStyle.Bold;
+        title.style.whiteSpace = WhiteSpace.Normal;
+        title.style.flexGrow = 1;
 
         title.style.color =
             quest.IsCompleted ? completeColor : textColor;
 
         Label state = new Label(
-            quest.IsCompleted ? "DONE" : "ACTIVE"
-        );
+            quest.IsCompleted ? "DONE" : "ACTIVE");
 
-        state.style.fontSize = 11;
+        state.style.fontSize = SmallSize;
+        state.style.marginLeft = 8;
         state.style.color =
             quest.IsCompleted ? completeColor : dimTextColor;
 
@@ -324,17 +323,11 @@ public class QuestPanelUIController : MonoBehaviour
 
     private void ToggleQuest(QuestInstance quest)
     {
-        if (_expandedQuest == quest)
-            _expandedQuest = null;
-        else
-            _expandedQuest = quest;
+        _expandedQuest =
+            _expandedQuest == quest ? null : quest;
 
         RefreshUI();
     }
-
-    #endregion
-
-    #region Progress
 
     private void DrawProgressBar(
         VisualElement parent,
@@ -353,10 +346,9 @@ public class QuestPanelUIController : MonoBehaviour
             total == 0 ? 0f : (float)completed / total;
 
         Label txt = new Label(
-            $"{completed}/{total} Objectives"
-        );
+            $"{completed}/{total} Objectives");
 
-        txt.style.fontSize = 11;
+        txt.style.fontSize = SmallSize;
         txt.style.marginTop = 6;
         txt.style.color = dimTextColor;
 
@@ -368,31 +360,25 @@ public class QuestPanelUIController : MonoBehaviour
         bg.style.backgroundColor =
             new Color(1f,1f,1f,0.08f);
 
-        bg.style.borderBottomLeftRadius = 999;
-        bg.style.borderBottomRightRadius = 999;
         bg.style.borderTopLeftRadius = 999;
         bg.style.borderTopRightRadius = 999;
+        bg.style.borderBottomLeftRadius = 999;
+        bg.style.borderBottomRightRadius = 999;
 
         VisualElement fill = new VisualElement();
         fill.style.height = 6;
         fill.style.width = Length.Percent(ratio * 100f);
         fill.style.backgroundColor =
-            quest.IsCompleted
-            ? completeColor
-            : progressColor;
+            quest.IsCompleted ? completeColor : progressColor;
 
-        fill.style.borderBottomLeftRadius = 999;
-        fill.style.borderBottomRightRadius = 999;
         fill.style.borderTopLeftRadius = 999;
         fill.style.borderTopRightRadius = 999;
+        fill.style.borderBottomLeftRadius = 999;
+        fill.style.borderBottomRightRadius = 999;
 
         bg.Add(fill);
         parent.Add(bg);
     }
-
-    #endregion
-
-    #region Expanded Content
 
     private void DrawDescription(
         VisualElement parent,
@@ -403,12 +389,11 @@ public class QuestPanelUIController : MonoBehaviour
             return;
 
         Label desc = new Label(
-            quest.data.description
-        );
+            quest.data.description);
 
         desc.style.marginTop = 10;
+        desc.style.fontSize = BodySize;
         desc.style.whiteSpace = WhiteSpace.Normal;
-        desc.style.fontSize = 13;
         desc.style.color = dimTextColor;
 
         parent.Add(desc);
@@ -442,21 +427,17 @@ public class QuestPanelUIController : MonoBehaviour
             Label line = new Label(
                 (done ? "✓ " : "• ") +
                 obj.description +
-                $" ({cur}/{max})"
-            );
+                $" ({cur}/{max})");
 
             line.style.marginTop = 5;
             line.style.marginLeft = 8;
+            line.style.fontSize = BodySize;
             line.style.whiteSpace = WhiteSpace.Normal;
 
             line.style.color =
                 done ? completeColor : textColor;
 
-            line.style.fontSize = 13;
-
             parent.Add(line);
         }
     }
-
-    #endregion
 }

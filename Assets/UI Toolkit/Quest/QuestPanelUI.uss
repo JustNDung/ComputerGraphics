@@ -1,42 +1,51 @@
-#overlay{
-    position:absolute;
-    left:0; top:0; right:0; bottom:0;
-    background-color:rgba(0,0,0,0.55);
-    display:none;
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    display: none;
+    -unity-font-definition: url("project://database/Assets/AllAssets/UI/TextFonts/nerdropol%20lattice.otf?fileID=12800000&guid=940dbfc7bb5320c408bf09f4d20051ae&type=3#nerdropol lattice");
 }
 
-#quest-panel{
-    position:absolute;
-    right:0;
-    top:0;
-    width:430px;
-    height:100%;
-    background-color:rgba(18,18,25,0.96);
-    padding:16px;
+#quest-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 430px;
+    height: 100%;
+    background-color: rgba(18, 18, 25, 0.96);
+    padding: 16px;
+    -unity-font-definition: url("project://database/Assets/AllAssets/UI/TextFonts/nerdropol%20lattice.otf?fileID=12800000&guid=940dbfc7bb5320c408bf09f4d20051ae&type=3#nerdropol lattice");
 }
 
-#header{
-    height:50px;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
+#header {
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    -unity-font-definition: url("project://database/Assets/AllAssets/UI/TextFonts/nerdropol%20lattice.otf?fileID=12800000&guid=940dbfc7bb5320c408bf09f4d20051ae&type=3#nerdropol lattice");
 }
 
-#title{
-    font-size:24px;
-    color:white;
-    unity-font-style:bold;
+#title {
+    font-size: 24px;
+    color: white;
+    unity-font-style: bold;
+    -unity-font-definition: url("project://database/Assets/AllAssets/UI/TextFonts/nerdropol%20lattice.otf?fileID=12800000&guid=940dbfc7bb5320c408bf09f4d20051ae&type=3#nerdropol lattice");
 }
 
-#quest-scroll{
-    flex-grow:1;
-    margin-top:10px;
+#quest-scroll {
+    flex-grow: 1;
+    margin-top: 10px;
+    -unity-font-definition: url("project://database/Assets/AllAssets/UI/TextFonts/nerdropol%20lattice.otf?fileID=12800000&guid=940dbfc7bb5320c408bf09f4d20051ae&type=3#nerdropol lattice");
 }
 
-#quest-btn{
-    position:absolute;
-    top:20px;
-    right:20px;
-    width:58px;
-    height:58px;
+#quest-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 58px;
+    height: 58px;
+    -unity-font-definition: url("project://database/Assets/AllAssets/UI/TextFonts/nerdropol%20lattice.otf?fileID=12800000&guid=940dbfc7bb5320c408bf09f4d20051ae&type=3#nerdropol lattice");
 }

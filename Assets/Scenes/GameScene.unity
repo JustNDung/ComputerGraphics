@@ -3810,6 +3810,11 @@ MonoBehaviour:
   panelWidth: 420
   hoverEdge: 20
   animationMs: 250
+  uiFont: {fileID: 12800000, guid: 940dbfc7bb5320c408bf09f4d20051ae, type: 3}
+  baseFontSize: 14
+  widthPerFontSize: 22
+  minWidth: 420
+  maxWidth: 760
   cardColor: {r: 1, g: 1, b: 1, a: 0.06}
   cardHoverColor: {r: 1, g: 1, b: 1, a: 0.1}
   textColor: {r: 1, g: 1, b: 1, a: 1}
