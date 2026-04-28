@@ -7,6 +7,8 @@ namespace Quest
     [CreateAssetMenu(menuName="Quest/Quest")]
     public class QuestSO : ScriptableObject
     {
+        public TriggerZone.ZoneType zoneType;
+        public bool isMainQuest = true;
         public string questId;
         public string title;
         public string description;

@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c807e2ae06a47058863c49f2cbd86c6, type: 3}
   m_Name: DoorMainQuest
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorExperiment.DoorQuest
-  questId: 
-  title: 
-  description: 
-  objectives: []
+  zoneType: 1
+  isMainQuest: 1
+  questId: door_main
+  title: Doorrrr
+  description: Experiment with different push positions and learn why a door opens
+    easiest at the handle.
+  objectives:
+  - {fileID: 11400000, guid: 79a0fa203925c594e9cedc8327dcee88, type: 2}
+  - {fileID: 11400000, guid: bd9ab84e68c65974b8114048ec38f2ec, type: 2}
+  - {fileID: 11400000, guid: abacff02cb8085b429cdebc9f3b4c76e, type: 2}
   completionReward:
     knowledgePoints: 0
     message: 

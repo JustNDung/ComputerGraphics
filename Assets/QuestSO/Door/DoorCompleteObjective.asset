@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2263658bc52545fc851baff4c3321404, type: 3}
   m_Name: DoorCompleteObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorExperiment.DoorCompleteObjective
-  description: 
+  description: Use what you learned to fully open the door.
   targetAmount: 1

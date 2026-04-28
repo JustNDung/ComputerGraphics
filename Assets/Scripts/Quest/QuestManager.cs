@@ -1,11 +1,9 @@
-﻿
-using Reward;
+﻿using Reward;
+using UnityEngine;
+using System.Collections.Generic;
 
 namespace Quest
 {
-    using UnityEngine;
-    using System.Collections.Generic;
-
     public class QuestManager : MonoBehaviour
     {
         public static QuestManager Instance;
@@ -14,6 +12,10 @@ namespace Quest
 
         private List<QuestInstance> activeQuests =
             new List<QuestInstance>();
+
+        public System.Action OnQuestUpdated;
+
+        public IReadOnlyList<QuestInstance> ActiveQuests => activeQuests;
 
         private void Awake()
         {
@@ -26,6 +28,7 @@ namespace Quest
         public void AddQuest(QuestSO quest)
         {
             activeQuests.Add(new QuestInstance(quest));
+            OnQuestUpdated?.Invoke();
         }
 
         public void ProcessEvent(RewardEvent e)
@@ -41,6 +44,8 @@ namespace Quest
                     CompleteQuest(quest);
                 }
             }
+
+            OnQuestUpdated?.Invoke();
         }
 
         void CompleteQuest(QuestInstance quest)

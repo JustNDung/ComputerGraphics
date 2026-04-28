@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2df58f70a12439999ddc9b86f414357, type: 3}
   m_Name: DoorHandleSuccessObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorExperiment.DoorHandleSuccessObjective
-  description: 
+  description: Apply force at the handle for better leverage.
   targetAmount: 1

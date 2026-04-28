@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb36ba98e09141ca8dd5ca7ae06201d6, type: 3}
   m_Name: DoorWrongTryPositionObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorExperiment.DoorWrongTryObjective
-  description: 
+  description: Test a weak push position near the hinge.
   targetAmount: 1

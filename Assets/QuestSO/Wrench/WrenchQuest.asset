@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 071ab158bf4e411ead9dd9a7bfeafcea, type: 3}
   m_Name: WrenchQuest
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.WrenchExperiment.WrenchQuest
-  questId: 
-  title: 
+  zoneType: 3
+  isMainQuest: 1
+  questId: wrench_main
+  title: Wrenchhh
   description: 
-  objectives: []
+  objectives:
+  - {fileID: 11400000, guid: 5c6cbac368f1e7743855fca32d6551d1, type: 2}
+  - {fileID: 11400000, guid: 0feb3cb0058f64640b95cb944f57beb7, type: 2}
+  - {fileID: 11400000, guid: 158595df37a91284b8577d48999a57fb, type: 2}
+  - {fileID: 11400000, guid: 2c2729e363e2b82429f169d1d202b15a, type: 2}
+  - {fileID: 11400000, guid: 26d6397fc38f5984d99eb71675b77af9, type: 2}
   completionReward:
     knowledgePoints: 0
     message: 

@@ -3,10 +3,9 @@
     <ui:VisualElement name="overlay"/>
     <ui:VisualElement name="quest-panel">
         <ui:VisualElement name="header">
-            <ui:Label name="title" text="QUESTS"/>
+            <ui:Label name="title" text="QUEST LOG"/>
             <ui:Button name="close-btn" text="✕"/>
         </ui:VisualElement>
-        <ui:Label name="subtitle" text="Global Objectives"/>
         <ui:ScrollView name="quest-scroll"/>
     </ui:VisualElement>
     <ui:Button name="quest-btn" text="📜"/>

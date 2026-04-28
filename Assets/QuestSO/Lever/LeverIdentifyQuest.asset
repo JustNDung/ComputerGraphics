@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e914ec814084d48bd517f691f94efcb, type: 3}
   m_Name: LeverIdentifyQuest
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.Lever.LeverIdentifyQuest
-  questId: 
-  title: 
+  zoneType: 2
+  isMainQuest: 1
+  questId: lever_main
+  title: Leverrrr
   description: 
-  objectives: []
+  objectives:
+  - {fileID: 11400000, guid: 2a140aea5d826b44785b7ff1b8ce0029, type: 2}
+  - {fileID: 11400000, guid: a7135e6348f63474a8027234f36448b7, type: 2}
+  - {fileID: 11400000, guid: f473fddc2b04cfd4a845f0bbd8db461f, type: 2}
+  - {fileID: 11400000, guid: f5870cd05278f344ea51958518c0b6ae, type: 2}
   completionReward:
     knowledgePoints: 0
     message: 

@@ -3,6 +3,8 @@
     public enum ZoneType
     {
         None,
-        DoorExperiment
+        DoorExperiment,
+        LeverExperiment,
+        WrenchExperiment
     }
 }
