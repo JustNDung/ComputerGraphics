@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673d77cdd10c49c5b37207c18b699b99, type: 3}
   m_Name: WrenchExploreBothObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.WrenchExperiment.WrenchExploreBothObjective
-  description: 
+  description: Explore force and distance strategies.
   targetAmount: 1

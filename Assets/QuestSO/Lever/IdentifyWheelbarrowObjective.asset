@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18f9fb8814a344dba8971650f760e588, type: 3}
   m_Name: IdentifyWheelbarrowObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.Lever.IdentifyWheelbarrowObjective
-  description: 
+  description: Recognize how a wheelbarrow uses leverage.
   targetAmount: 1

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59796990bb014ca782d685581a133f6b, type: 3}
   m_Name: WrenchIncreaseDistanceObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.WrenchExperiment.WrenchIncreaseDistanceObjective
-  description: 
+  description: Grip farther from the bolt for more leverage.
   targetAmount: 1

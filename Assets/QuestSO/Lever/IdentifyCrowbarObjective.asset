@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acca0fa6f3b44460bd550110b73f840c, type: 3}
   m_Name: IdentifyCrowbarObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.Lever.IdentifyCrowbarObjective
-  description: 
+  description: Recognize how a crowbar uses leverage.
   targetAmount: 1

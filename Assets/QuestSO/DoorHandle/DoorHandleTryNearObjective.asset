@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a0a5dd91d84cd8ae63c7cc45c91849, type: 3}
   m_Name: DoorHandleTryNearObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorHandleExperiment.DoorHandleTryNearObjective
-  description: 
+  description: Apply force close to the rotation point.
   targetAmount: 1

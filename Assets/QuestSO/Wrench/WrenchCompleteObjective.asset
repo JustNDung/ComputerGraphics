@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e154c67ace0840a88dfdac9451c1be14, type: 3}
   m_Name: WrenchCompleteObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.WrenchExperiment.WrenchCompleteObjective
-  description: 
+  description: Use what you learned to finish the task.
   targetAmount: 1

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477b7293c01542c3a03636d3a6c75bbc, type: 3}
   m_Name: WrenchIncreaseForceObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.WrenchExperiment.WrenchIncreaseForceObjective
-  description: 
+  description: Use greater force on the wrench.
   targetAmount: 1

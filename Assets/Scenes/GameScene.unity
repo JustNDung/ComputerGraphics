@@ -3809,6 +3809,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI_Toolkit.Quest.QuestPanelUI
   panelWidth: 420
   hoverEdge: 20
+  animationMs: 250
+  cardColor: {r: 1, g: 1, b: 1, a: 0.06}
+  cardHoverColor: {r: 1, g: 1, b: 1, a: 0.1}
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  dimTextColor: {r: 1, g: 1, b: 1, a: 0.72}
+  completeColor: {r: 0.35, g: 1, b: 0.45, a: 1}
+  progressColor: {r: 0.35, g: 0.75, b: 1, a: 1}
 --- !u!1 &1124575932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4996,10 +5003,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Quest.QuestManager
   startQuests:
-  - {fileID: 11400000, guid: 452e463743df8884393b94fbe744a1ec, type: 2}
   - {fileID: 11400000, guid: 81dc70bd7c80c834bb59a4ac325c6a6e, type: 2}
+  - {fileID: 11400000, guid: 452e463743df8884393b94fbe744a1ec, type: 2}
   - {fileID: 11400000, guid: 2c14102bb31c2f440b4fb3198f8ec333, type: 2}
   - {fileID: 11400000, guid: 1efd943d7cef08145a98eccc942913d5, type: 2}
+  - {fileID: 11400000, guid: 13865a9e05585c940809382a186d1a53, type: 2}
 --- !u!4 &1621339954
 Transform:
   m_ObjectHideFlags: 0

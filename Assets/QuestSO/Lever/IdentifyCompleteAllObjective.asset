@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b2abadc5e745e3bc5b97f24f79f4bd, type: 3}
   m_Name: IdentifyCompleteAllObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.Lever.IdentifyCompleteAllObjective
-  description: 
+  description: Identify all lever examples.
   targetAmount: 1

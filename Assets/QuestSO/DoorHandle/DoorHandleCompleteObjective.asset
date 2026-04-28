@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da0172b85ff400cb709ced50463f591, type: 3}
   m_Name: DoorHandleCompleteObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorHandleExperiment.DoorHandleCompleteObjective
-  description: 
+  description: Use what you learned to finish the experiment.
   targetAmount: 1

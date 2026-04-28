@@ -15,7 +15,7 @@ MonoBehaviour:
   zoneType: 1
   isMainQuest: 1
   questId: door_main
-  title: Doorrrr
+  title: Door Experiment
   description: Experiment with different push positions and learn why a door opens
     easiest at the handle.
   objectives:

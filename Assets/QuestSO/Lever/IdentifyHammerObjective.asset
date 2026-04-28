@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ba288955704bfdb3486b990f0c42e4, type: 3}
   m_Name: IdentifyHammerObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.Lever.IdentifyHammerObjective
-  description: 
+  description: Recognize how a hammer can act as a lever.
   targetAmount: 1

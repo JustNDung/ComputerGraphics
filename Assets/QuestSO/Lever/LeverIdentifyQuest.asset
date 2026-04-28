@@ -15,8 +15,9 @@ MonoBehaviour:
   zoneType: 2
   isMainQuest: 1
   questId: lever_main
-  title: Leverrrr
-  description: 
+  title: Lever Identification Challenge
+  description: Identify everyday tools that use lever principles and discover how
+    simple machines make work easier.
   objectives:
   - {fileID: 11400000, guid: 2a140aea5d826b44785b7ff1b8ce0029, type: 2}
   - {fileID: 11400000, guid: a7135e6348f63474a8027234f36448b7, type: 2}

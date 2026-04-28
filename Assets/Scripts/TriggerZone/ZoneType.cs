@@ -5,6 +5,7 @@
         None,
         DoorExperiment,
         LeverExperiment,
-        WrenchExperiment
+        WrenchExperiment,
+        RealWorldLever
     }
 }

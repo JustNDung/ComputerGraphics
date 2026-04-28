@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef0dd79186643558820b9e72db2412d, type: 3}
   m_Name: DoorHandleTryFarObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorHandleExperiment.DoorHandleTryFarObjective
-  description: 
+  description: Apply force at the far end of the handle.
   targetAmount: 1

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c40cf9b637c400c81b19bdf90ac1920, type: 3}
+  m_Name: RealWorldLeverQuest
+  m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.RealWorldLever.RealWorldLeverQuest
+  zoneType: 4
+  isMainQuest: 1
+  questId: real_world_lever_main
+  title: Everyday Lever Challenge
+  description: Study how levers are used in daily life by identifying the fishing
+    rod and rowing oar.
+  objectives:
+  - {fileID: 11400000, guid: e9c604d4f7158064daec876489c8f3f9, type: 2}
+  - {fileID: 11400000, guid: 547178d12e7802944924106b4392392e, type: 2}
+  completionReward:
+    knowledgePoints: 0
+    message: 

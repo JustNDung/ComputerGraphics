@@ -15,8 +15,9 @@ MonoBehaviour:
   zoneType: 3
   isMainQuest: 1
   questId: wrench_main
-  title: Wrenchhh
-  description: 
+  title: Wrench Torque Experiment
+  description: 'Use a wrench to discover two ways to increase turning power: apply
+    more force or increase distance from the pivot.'
   objectives:
   - {fileID: 11400000, guid: 5c6cbac368f1e7743855fca32d6551d1, type: 2}
   - {fileID: 11400000, guid: 0feb3cb0058f64640b95cb944f57beb7, type: 2}
