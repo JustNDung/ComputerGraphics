@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Quest/QuestPanelUI.uss?fileID=7433441132597879392&amp;guid=8c2e705b8940cd64fb5eb6736dd19670&amp;type=3#QuestPanelUI"/>
+    <ui:VisualElement name="overlay"/>
+    <ui:VisualElement name="quest-panel">
+        <ui:VisualElement name="header">
+            <ui:Label name="title" text="QUEST LOG"/>
+            <ui:Button name="close-btn" text="✕"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="quest-scroll"/>
+    </ui:VisualElement>
+    <ui:Button name="quest-btn" text="📜"/>
+</ui:UXML>

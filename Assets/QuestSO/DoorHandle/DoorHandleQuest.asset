@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42ab6fad9ba4ae9b6bc2a58b3dc3b45, type: 3}
+  m_Name: DoorHandleQuest
+  m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorHandleExperiment.DoorHandleQuest
+  zoneType: 1
+  isMainQuest: 1
+  questId: door_handle_main
+  title: Door Handle Experiment
+  description: Test different push positions on the handle and discover why force
+    applied farther from the pivot works better.
+  objectives:
+  - {fileID: 11400000, guid: d3787bd41250e4b4da764eb2e42acf14, type: 2}
+  - {fileID: 11400000, guid: 09b76f42f54798345b1b2f0fcf174305, type: 2}
+  - {fileID: 11400000, guid: 6f4c486e7eed39944a30121fabad8301, type: 2}
+  - {fileID: 11400000, guid: 7789d5f5ff701144baaf52ae2dfb1bd3, type: 2}
+  completionReward:
+    knowledgePoints: 0
+    message: 
