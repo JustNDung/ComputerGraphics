@@ -1,0 +1,14 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="DiemTua_Line" style="flex-grow: 1; position: absolute; width: 10px; height: 100px; transform-origin: left; -unity-background-image-tint-color: rgb(2, 2, 2); background-color: rgb(255, 255, 255);"/>
+    <ui:VisualElement name="DiemTua_Box" style="flex-grow: 1; background-color: rgb(255, 255, 255); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; width: auto; height: auto; position: absolute;">
+        <ui:Label text="Điểm tựa"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="DiemTua_Line1" style="flex-grow: 1; position: absolute; width: 10px; height: 100px; transform-origin: left; -unity-background-image-tint-color: rgb(2, 2, 2); background-color: rgb(255, 255, 255);"/>
+    <ui:VisualElement name="DiemTua_Line2" style="flex-grow: 1; position: absolute; width: 10px; height: 100px; transform-origin: left; -unity-background-image-tint-color: rgb(2, 2, 2); background-color: rgb(255, 255, 255);"/>
+    <ui:VisualElement name="DiemTua_Box1" style="flex-grow: 1; background-color: rgb(255, 255, 255); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; width: auto; height: auto; position: absolute;">
+        <ui:Label text="Điểm tựa"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="DiemTua_Box2" style="flex-grow: 1; background-color: rgb(255, 255, 255); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; width: auto; height: auto; position: absolute;">
+        <ui:Label text="Điểm tựa"/>
+    </ui:VisualElement>
+</ui:UXML>
