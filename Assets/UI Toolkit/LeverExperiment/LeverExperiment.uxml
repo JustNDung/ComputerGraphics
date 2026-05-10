@@ -1,33 +1,33 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
     <Style src="project://database/Assets/UI%20Toolkit/Vector/VectorStyle.uss?fileID=7433441132597879392&amp;guid=b705f7fbf12710f4b90a8cbc757d16ef&amp;type=3#VectorStyle"/>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 466px; right: 253px; height: 218px;">
-        <ui:VisualElement name="Marker" class="marker-base" style="top: 380px; left: -651px;">
+    <ui:VisualElement name="VisualElement" class="root-container" style="top: 466px; right: 239px; height: 232px; width: 394px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 188px; left: -666px;">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
-        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 374px; left: -113px; align-self: auto;">
-            <ui:Label text="THÔNG TIN HỆ THỐNG" class="header-title"/>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 283px; left: -700px; align-self: auto;">
+            <ui:Label text="Điểm tựa" class="header-title"/>
             <ui:VisualElement class="header-line"/>
-            <ui:Label text="Trạng thái: Đang kết nối..." class="description-text"/>
+            <ui:Label text="Khi có lực làm vật xoay, mọi điểm trên vật thể sẽ vạch ra những quỹ đạo hình tròn (hoặc cung tròn) xung quanh điểm tựa cố định này." class="description-text"/>
             <ui:VisualElement class="panel-footer">
                 <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
                 <ui:Button text="XÁC NHẬN" class="btn-primary"/>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="vector-container" class="vector-container" style="left: 1138px; top: 160px; rotate: -32deg;">
-        <ui:VisualElement name="line" class="vector-line" style="width: 275px;"/>
-        <ui:VisualElement name="handle-start" class="vector-handle"/>
-        <ui:VisualElement name="handle-end" class="vector-handle" style="top: 1px; left: 281px;"/>
+    <ui:VisualElement name="vector-container" class="vector-container" style="left: 1138px; top: -1px; rotate: -32deg;">
+        <ui:VisualElement name="line" class="vector-line" style="width: 416px; height: 4px; top: 0; left: -30px;"/>
+        <ui:VisualElement name="handle-start" class="vector-handle" style="top: 4px; left: -32px;"/>
+        <ui:VisualElement name="handle-end" class="vector-handle" style="top: 2px; left: 386px;"/>
     </ui:VisualElement>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: -94px; right: 253px; height: 218px;">
-        <ui:VisualElement name="Marker" class="marker-base" style="top: 730px; left: -491px;">
+    <ui:VisualElement name="VisualElement" class="root-container" style="top: -332px; right: 253px; height: 218px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 762px; left: -418px;">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
-        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 457px; left: -596px; align-self: auto;">
-            <ui:Label text="THÔNG TIN HỆ THỐNG" class="header-title"/>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 491px; left: -445px; align-self: auto;">
+            <ui:Label text="Cánh tay đòn" class="header-title"/>
             <ui:VisualElement class="header-line"/>
-            <ui:Label text="Trạng thái: Đang kết nối..." class="description-text"/>
+            <ui:Label text="Cánh tay đòn không nhất thiết là khoảng cách từ trục quay đến điểm tác dụng lực, mà phải là đoạn thẳng kẻ vuông góc từ trục quay đến giá của lực." class="description-text"/>
             <ui:VisualElement class="panel-footer">
                 <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
                 <ui:Button text="XÁC NHẬN" class="btn-primary"/>
