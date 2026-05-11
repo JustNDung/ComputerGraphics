@@ -1,4 +1,5 @@
 using System.Collections;
+using MessageDispatcher.AllMessages;
 using UI;
 using UnityEngine;
 using Unity.Cinemachine;
@@ -17,6 +18,8 @@ public class CameraTrigger : MonoBehaviour
     private bool _isFocused = false;
     private bool _isTransitioning = false;
     private CinemachineBrain brain;
+    
+    public TriggerZone.ZoneType zoneType;
 
     private void Start()
     {
@@ -60,14 +63,16 @@ public class CameraTrigger : MonoBehaviour
         _isFocused = true;
         _isTransitioning = false;
         playerController.gameObject.SetActive(false);
-        experimentUI.gameObject.SetActive(true);
+        // experimentUI.gameObject.SetActive(true);
+        MessageDispatcher.MessageDispatcher.Publish(new UIDisplayMessage(zoneType));
 
         Debug.Log("Zoom vào thí nghiệm 🎬");
     }
 
     void ExitCamera()
     {
-        experimentUI.gameObject.SetActive(false);
+        // experimentUI.gameObject.SetActive(false);
+        MessageDispatcher.MessageDispatcher.Publish(new UIHideMessage(zoneType));
         _isTransitioning = true;
 
         // 👉 trả camera về explore
