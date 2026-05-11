@@ -800,6 +800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 56698465}
+  - component: {fileID: 56698466}
   m_Layer: 0
   m_Name: ExperimentWrench
   m_TagString: Untagged
@@ -828,6 +829,19 @@ Transform:
   - {fileID: 1918295095}
   m_Father: {fileID: 779240008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &56698466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56698464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 594a24dcf31147feb2196ca972ce39ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.WrenchExperimentUI
+  wrenchExperimentUI: {fileID: 1198621146}
 --- !u!1 &101472508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d836360f5c8f27a41b92627cda5ebe40, type: 3}
@@ -1010,6 +1024,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 779240008}
     m_Modifications:
+    - target: {fileID: 337113695748665991, guid: 67649409bd0ff824f9d9ba24e9eccba7, type: 3}
+      propertyPath: wheelExperimentUI
+      value: 
+      objectReference: {fileID: 1881979999}
     - target: {fileID: 1255695057416771274, guid: 67649409bd0ff824f9d9ba24e9eccba7, type: 3}
       propertyPath: m_Name
       value: ExperimentWheel
@@ -1598,6 +1616,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302288722}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &310323365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5764682101771750130, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
+  m_PrefabInstance: {fileID: 1960614447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &350757381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1780,13 +1803,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 403300304}
+  - component: {fileID: 403300305}
   m_Layer: 0
   m_Name: ExperimentDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &403300304
 Transform:
   m_ObjectHideFlags: 0
@@ -1805,6 +1829,19 @@ Transform:
   - {fileID: 1817560360}
   m_Father: {fileID: 779240008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &403300305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403300303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c51f8cd9187455383109f18e918f81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.DoorExperimentUI
+  doorExperimentUI: {fileID: 1541337885}
 --- !u!1 &442144162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2221,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4378574491056343969, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
+      propertyPath: hammerExperimentUI
+      value: 
+      objectReference: {fileID: 1486137357}
     - target: {fileID: 5764682101771750130, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
       propertyPath: m_Name
       value: ExperimentHammer
@@ -3866,10 +3907,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WheelExperimentUI
       objectReference: {fileID: 0}
-    - target: {fileID: 7821656255084652296, guid: 98f1fdd0d014a88469350c1e9d54d4e2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4276,6 +4313,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6411476833012246200, guid: c790ee093accaab48a73e49028181e30, type: 3}
+      propertyPath: leverExperimentUI
+      value: 
+      objectReference: {fileID: 1461477106}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4573,14 +4614,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1198621145}
   - component: {fileID: 1198621146}
-  - component: {fileID: 1198621147}
   m_Layer: 0
   m_Name: WrenchExperimentUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1198621145
 Transform:
   m_ObjectHideFlags: 0
@@ -4603,7 +4643,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198621144}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -4619,25 +4659,6 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
---- !u!114 &1198621147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198621144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3fc66b161dc82409a85ad84aa80f44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WrenchExperimentUIController
-  forceF1a: {x: 0, y: 100}
-  forceF2a: {x: 0, y: 100}
-  forceF1b: {x: 0, y: 100}
-  forceF2b: {x: 0, y: 100}
-  visualScale: 1
-  colorGroupA: {r: 1, g: 0, b: 0, a: 1}
-  colorGroupB: {r: 0, g: 0, b: 1, a: 1}
 --- !u!1001 &1227970804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4690,14 +4711,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BikeExperimentUI
       objectReference: {fileID: 0}
-    - target: {fileID: 2518141432961212477, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7427986084172930154, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
-      propertyPath: sourceAsset
-      value: 
-      objectReference: {fileID: 9197481963319205126, guid: 5c670bdcc4270ee40a922c48750bc7d3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5274,10 +5287,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeverExperimentUI
       objectReference: {fileID: 0}
-    - target: {fileID: 2518141432961212477, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5288,6 +5297,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2205706354926483293, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
   m_PrefabInstance: {fileID: 1461477104}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1461477106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7427986084172930154, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
+  m_PrefabInstance: {fileID: 1461477104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1001 &1486137355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5299,10 +5319,6 @@ PrefabInstance:
     - target: {fileID: 759463754174543865, guid: a70a9dcaf3d5933418fc978125201136, type: 3}
       propertyPath: m_Name
       value: HammerExperimentUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 759463754174543865, guid: a70a9dcaf3d5933418fc978125201136, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6638498715185653548, guid: a70a9dcaf3d5933418fc978125201136, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5354,6 +5370,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6638498715185653548, guid: a70a9dcaf3d5933418fc978125201136, type: 3}
   m_PrefabInstance: {fileID: 1486137355}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1486137357 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1987441237029443506, guid: a70a9dcaf3d5933418fc978125201136, type: 3}
+  m_PrefabInstance: {fileID: 1486137355}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1 &1541337883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5394,7 +5421,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541337883}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -5516,6 +5543,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 56698465}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1559628124 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7427986084172930154, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
+  m_PrefabInstance: {fileID: 1227970804}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1001 &1590477190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7030,6 +7068,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877415688}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1881979999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 413576986791888268, guid: 98f1fdd0d014a88469350c1e9d54d4e2, type: 3}
+  m_PrefabInstance: {fileID: 796121659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1 &1913454577
 GameObject:
   m_ObjectHideFlags: 0
@@ -7127,7 +7176,7 @@ MonoBehaviour:
   experimentUI: {fileID: 1124575934}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
-  zoneType: 0
+  zoneType: 3
 --- !u!65 &1918295098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7367,20 +7416,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5642463856902426026, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
+      propertyPath: bikeExperimentUI
+      value: 
+      objectReference: {fileID: 1559628124}
     - target: {fileID: 5764682101771750130, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
       propertyPath: m_Name
       value: ExperimentBike
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4378574491056343969, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5764682101771750130, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1960614449}
   m_SourcePrefab: {fileID: 100100000, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
 --- !u!4 &1960614448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4242618171539513898, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
   m_PrefabInstance: {fileID: 1960614447}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960614449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310323365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e92c4d30c8634f588c7d91959d448dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.BikeExperimentUI
+  bikeExperimentUI: {fileID: 1559628124}
 --- !u!1 &1969353054
 GameObject:
   m_ObjectHideFlags: 0
@@ -8011,6 +8081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExperimentSeesaw3
       objectReference: {fileID: 0}
+    - target: {fileID: 2397532284657574179, guid: a02e27cb9df789941ba842d0c0b8cecf, type: 3}
+      propertyPath: seesaw3ExperimentUI
+      value: 
+      objectReference: {fileID: 6638498714533318358}
     - target: {fileID: 6664420579712893593, guid: a02e27cb9df789941ba842d0c0b8cecf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 61.57
@@ -8122,6 +8196,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5883653769885226365, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
   m_PrefabInstance: {fileID: 8722083683285972226}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2205993367432129844 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 434686075189864344, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
+  m_PrefabInstance: {fileID: 8722083683285972226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1001 &2345378651695725071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8130,6 +8215,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 779240008}
     m_Modifications:
+    - target: {fileID: 3853928873404586623, guid: 8a88176053af29549a348d53964a071d, type: 3}
+      propertyPath: seesaw2ExperimentUI
+      value: 
+      objectReference: {fileID: 6638498714922573651}
     - target: {fileID: 5141065826917989639, guid: 8a88176053af29549a348d53964a071d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 61.57
@@ -8246,6 +8335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExperimentHead
       objectReference: {fileID: 0}
+    - target: {fileID: 8734977684694275297, guid: 7998c8d5cc75b5c49b9acf6b1648fd9d, type: 3}
+      propertyPath: headExperimentUI
+      value: 
+      objectReference: {fileID: 2205993367432129844}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8365,10 +8458,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeesawExperimentUI2
       objectReference: {fileID: 0}
-    - target: {fileID: 5713332197182806144, guid: e556d369f9352a546b280842ea7d079b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8382,6 +8471,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 779240008}
     m_Modifications:
+    - target: {fileID: 3283490735925043283, guid: faca4cb8b0e4ce742843824bf6ff213b, type: 3}
+      propertyPath: exploreCam
+      value: 
+      objectReference: {fileID: 478242933}
+    - target: {fileID: 3283490735925043283, guid: faca4cb8b0e4ce742843824bf6ff213b, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 618942697}
+    - target: {fileID: 5065433660585485627, guid: faca4cb8b0e4ce742843824bf6ff213b, type: 3}
+      propertyPath: seesaw1ExperimentUI
+      value: 
+      objectReference: {fileID: 6638498714226059229}
     - target: {fileID: 5282412462669343857, guid: faca4cb8b0e4ce742843824bf6ff213b, type: 3}
       propertyPath: m_Name
       value: ExperimentSeesaw1
@@ -8483,10 +8584,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeesawExperimentUI1
       objectReference: {fileID: 0}
-    - target: {fileID: 5108319600787375134, guid: e71a7ac371c55f343963c23328d3ef3b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8497,16 +8594,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2205993367718077811, guid: e71a7ac371c55f343963c23328d3ef3b, type: 3}
   m_PrefabInstance: {fileID: 6547139254828192006}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6638498714226059229 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6204128623428069621, guid: e71a7ac371c55f343963c23328d3ef3b, type: 3}
+  m_PrefabInstance: {fileID: 6547139254828192006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!4 &6638498714533318357 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5073766140106664447, guid: 55229d43dc5e3b843bf60c2306aa4ab8, type: 3}
   m_PrefabInstance: {fileID: 7714989963117372899}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6638498714533318358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4261745190676053333, guid: 55229d43dc5e3b843bf60c2306aa4ab8, type: 3}
+  m_PrefabInstance: {fileID: 7714989963117372899}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!4 &6638498714922573650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2595388777539219902, guid: e556d369f9352a546b280842ea7d079b, type: 3}
   m_PrefabInstance: {fileID: 4625340034382145673}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6638498714922573651 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1918661806733547891, guid: e556d369f9352a546b280842ea7d079b, type: 3}
+  m_PrefabInstance: {fileID: 4625340034382145673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!1001 &7714989963117372899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8558,10 +8688,6 @@ PrefabInstance:
     - target: {fileID: 8992615859258737489, guid: 55229d43dc5e3b843bf60c2306aa4ab8, type: 3}
       propertyPath: m_Name
       value: SeesawExperimentUI3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8992615859258737489, guid: 55229d43dc5e3b843bf60c2306aa4ab8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8619,10 +8745,6 @@ PrefabInstance:
     - target: {fileID: 8441594386345317682, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
       propertyPath: m_Name
       value: HeadExperiment
-      objectReference: {fileID: 0}
-    - target: {fileID: 8441594386345317682, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

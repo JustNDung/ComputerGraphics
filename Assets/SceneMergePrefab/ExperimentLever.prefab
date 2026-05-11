@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2645159448847663594}
+  - component: {fileID: 6411476833012246200}
   m_Layer: 0
   m_Name: ExperimentLever
   m_TagString: Untagged
@@ -34,6 +35,19 @@ Transform:
   - {fileID: 3477579432853680454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6411476833012246200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235715620609765659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6f0e387bfa436a83dbe4cbf48355e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.LeverExperimentUI
+  leverExperimentUI: {fileID: 0}
 --- !u!1 &3095411258727407631
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +247,7 @@ MonoBehaviour:
   experimentUI: {fileID: 0}
   zoomDelay: 0.25
   playerController: {fileID: 0}
+  zoneType: 2
 --- !u!114 &5842105313945318021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c921ae01076a43cb8c6a978514dc2d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerZone.TriggerZone
-  zoneType: 1
+  zoneType: 2
 --- !u!1001 &1747133860135793447
 PrefabInstance:
   m_ObjectHideFlags: 0

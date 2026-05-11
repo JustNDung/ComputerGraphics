@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6664420579712893593}
+  - component: {fileID: 2397532284657574179}
   m_Layer: 0
   m_Name: ExperimentSeesaw3
   m_TagString: Untagged
@@ -34,6 +35,19 @@ Transform:
   - {fileID: 1292847062311544214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2397532284657574179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133591831202649721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b388c26ca1487fa4c15ae873dc0e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Seesaw3ExperimentUI
+  seesaw3ExperimentUI: {fileID: 0}
 --- !u!1 &625410169354916855
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +120,7 @@ MonoBehaviour:
   experimentUI: {fileID: 0}
   zoomDelay: 0.25
   playerController: {fileID: 0}
+  zoneType: 7
 --- !u!114 &6174684733466500906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c921ae01076a43cb8c6a978514dc2d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerZone.TriggerZone
-  zoneType: 1
+  zoneType: 7
 --- !u!1 &2173523891967438451
 GameObject:
   m_ObjectHideFlags: 0

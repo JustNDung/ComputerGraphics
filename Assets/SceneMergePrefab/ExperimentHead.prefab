@@ -165,6 +165,7 @@ MonoBehaviour:
   experimentUI: {fileID: 0}
   zoomDelay: 0.25
   playerController: {fileID: 0}
+  zoneType: 10
 --- !u!114 &5269136427425382663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c921ae01076a43cb8c6a978514dc2d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerZone.TriggerZone
-  zoneType: 1
+  zoneType: 10
 --- !u!1 &4859889548730449612
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1563604363951242620}
+  - component: {fileID: 8734977684694275297}
   m_Layer: 0
   m_Name: ExperimentHead
   m_TagString: Untagged
@@ -212,6 +214,19 @@ Transform:
   - {fileID: 3885831460531258705}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8734977684694275297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859889548730449612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018dc56733e74da69ad7ae4f37cb267d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.HeadExperimentUI
+  headExperimentUI: {fileID: 0}
 --- !u!1001 &3632019360244933306
 PrefabInstance:
   m_ObjectHideFlags: 0
