@@ -14,5 +14,9 @@
         BikeExperiment,
         HeadExperiment,
         ArmExperiment,
+        RealWorldLeverExperiment,
+        BodyLeverExperiment,
+        FishingRodExperiment,
+        OarExperiment,
     }
 }

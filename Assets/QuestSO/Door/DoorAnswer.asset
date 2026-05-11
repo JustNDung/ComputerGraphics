@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf21540be79a48abb77c5c20f8eacff9, type: 3}
   m_Name: DoorAnswer
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorExperiment.DoorAnswerObjective
-  description: 
+  description: "X\xE1c \u0111\u1ECBnh tr\u01B0\u1EDDng h\u1EE3p l\u1EF1c l\xE0m xoay
+    c\xE1nh c\u1EEDa"
   targetAmount: 1
   requiredActionId: door_right_answer

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65104e26165c48e9aade1c2c8bc3315c, type: 3}
+  m_Name: BodyLever
+  m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.BodyLever.BodyLeverQuest
+  zoneType: 13
+  isMainQuest: 1
+  questId: body_lever_main
+  title: Lever in human body
+  description: Explore two kinds of lever in human body
+  objectives:
+  - {fileID: 11400000, guid: 4b327e738b770964084e5a3c492139e8, type: 2}
+  - {fileID: 11400000, guid: 3db65e8ed188fb349b957e11b5f6109f, type: 2}
+  completionReward:
+    knowledgePoints: 0
+    message: 

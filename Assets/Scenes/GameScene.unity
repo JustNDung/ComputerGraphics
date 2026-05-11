@@ -4456,7 +4456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1112679875
 Transform:
   m_ObjectHideFlags: 0
@@ -6223,10 +6223,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Quest.QuestManager
   startQuests:
   - {fileID: 11400000, guid: 81dc70bd7c80c834bb59a4ac325c6a6e, type: 2}
-  - {fileID: 11400000, guid: 452e463743df8884393b94fbe744a1ec, type: 2}
   - {fileID: 11400000, guid: 2c14102bb31c2f440b4fb3198f8ec333, type: 2}
   - {fileID: 11400000, guid: 1efd943d7cef08145a98eccc942913d5, type: 2}
   - {fileID: 11400000, guid: 13865a9e05585c940809382a186d1a53, type: 2}
+  - {fileID: 11400000, guid: 5421c17c5a0b14d40952e8e43512873e, type: 2}
+  - {fileID: 11400000, guid: 00391b6fb10d79f4da292611c5b76282, type: 2}
 --- !u!4 &1621339954
 Transform:
   m_ObjectHideFlags: 0
@@ -8458,6 +8459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeesawExperimentUI2
       objectReference: {fileID: 0}
+    - target: {fileID: 5713332197182806144, guid: e556d369f9352a546b280842ea7d079b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8486,6 +8491,10 @@ PrefabInstance:
     - target: {fileID: 5282412462669343857, guid: faca4cb8b0e4ce742843824bf6ff213b, type: 3}
       propertyPath: m_Name
       value: ExperimentSeesaw1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282412462669343857, guid: faca4cb8b0e4ce742843824bf6ff213b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8213313633533721736, guid: faca4cb8b0e4ce742843824bf6ff213b, type: 3}
       propertyPath: m_LocalPosition.x
