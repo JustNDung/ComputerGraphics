@@ -2,14 +2,14 @@
     <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
     <Style src="project://database/Assets/UI%20Toolkit/ForceVector/ForceVector.uss?fileID=7433441132597879392&amp;guid=86b68e4863dd60045b9c8c6c95c0e0b6&amp;type=3#ForceVector"/>
     <Style src="project://database/Assets/UI%20Toolkit/Vector/VectorStyle.uss?fileID=7433441132597879392&amp;guid=b705f7fbf12710f4b90a8cbc757d16ef&amp;type=3#VectorStyle"/>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 466px; right: 1202px; height: 218px;">
+    <ui:VisualElement name="VisualElement" class="root-container" style="top: 466px; right: 1202px; height: 236px; width: 380px;">
         <ui:VisualElement name="Marker" class="marker-base">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
         <ui:VisualElement name="InfoPanel" class="panel-container" style="top: -279px; left: -105px; align-self: auto;">
-            <ui:Label text="THÔNG TIN HỆ THỐNG" class="header-title"/>
+            <ui:Label text="Điểm tựa" class="header-title"/>
             <ui:VisualElement class="header-line"/>
-            <ui:Label text="Trạng thái: Đang kết nối..." class="description-text"/>
+            <ui:Label text="Điểm tựa (trong vật lý thường gọi là trục quay hoặc điểm quay) là một điểm hoặc một trục cố định mà một vật thể rắn (thường là cơ cấu đòn bẩy) tựa vào đó để xoay chuyển." class="description-text"/>
             <ui:VisualElement class="panel-footer">
                 <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
                 <ui:Button text="XÁC NHẬN" class="btn-primary"/>
@@ -25,5 +25,19 @@
         <ui:VisualElement name="line" class="vector-line" style="width: 472px; left: -197px;"/>
         <ui:VisualElement name="handle-start" class="vector-handle" style="top: -1px; left: -197px;"/>
         <ui:VisualElement name="handle-end" class="vector-handle" style="top: 1px; left: 281px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="VisualElement" class="root-container" style="top: 787px; right: 1202px; height: 218px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: -91px; left: 227px;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: -9px; left: 427px; align-self: auto;">
+            <ui:Label text="Cánh tay đòn" class="header-title"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Cánh tay đòn (thường được ký hiệu là d) là khoảng cách vuông góc từ trục quay (hoặc điểm tựa) đến giá của lực (đường thẳng chứa vectơ lực tác dụng)." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

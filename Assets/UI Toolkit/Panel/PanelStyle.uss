@@ -5,7 +5,7 @@
     align-items: flex-end;
 }
 
-/* Marker - Chấm nhỏ */
+/* Marker - Chấm tròn nhỏ */
 .marker-base {
     width: 24px;
     height: 24px;
@@ -15,10 +15,13 @@
     align-items: center;
     border-width: 1px;
     border-color: rgba(99, 102, 241, 0.5);
-    /* Unity sẽ tự động transition opacity và scale */
     transition-duration: 0.3s;
-    cursor: link;
     margin-bottom: 10px;
+}
+
+.marker-base:hover {
+    background-color: rgba(99, 102, 241, 0.3);
+    scale: 1.1;
 }
 
 .marker-dot {
@@ -36,22 +39,19 @@
     border-color: rgba(99, 102, 241, 0.4);
     padding: 20px;
     width: 380px;
-    /* Không ghi transition-property để tránh lỗi cú pháp, Unity sẽ tự hiểu */
     transition-duration: 0.3s;
-
-    /* Mặc định cho hiện để thấy trong Scene */
     display: flex;
     opacity: 1;
 }
 
-/* Class ẩn - Sẽ được Script thêm vào khi Start Game */
+/* Class ẩn */
 .panel-hidden {
-    /* Khi ẩn thì bỏ display để không cản trở click chuột vào đối tượng 3D phía sau */
     display: none;
     opacity: 0;
+    scale: 0.8; /* Hiệu ứng thu nhỏ khi ẩn */
 }
 
-/* --- Style phụ cho nội dung bên trong --- */
+/* --- Nội dung bổ trợ --- */
 .header-title { color: #818CF8; font-size: 18px; -unity-font-style: bold; }
 .header-line { height: 2px; background-color: #6366F1; width: 50px; margin-top: 5px; margin-bottom: 15px; }
 .description-text { color: #94A3B8; font-size: 13px; white-space: normal; }

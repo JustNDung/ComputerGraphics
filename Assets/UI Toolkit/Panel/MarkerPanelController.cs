@@ -1,55 +1,50 @@
 using UnityEngine.UIElements;
+using UnityEngine;
 
-public class MarkerPanelController
+[UxmlElement]
+public partial class MarkerPanelController : VisualElement
 {
-    private readonly VisualElement _panel;
-    private readonly VisualElement _marker;
-    private readonly Label _statusLabel;
-    private readonly Button _btnClose;
-
+    private VisualElement _panel;
+    private VisualElement _marker;
+    private Label _statusLabel;
+    private Button _btnClose;
     private const string HIDDEN_CLASS = "panel-hidden";
 
-    public MarkerPanelController(VisualElement panelRoot)
+    public MarkerPanelController()
     {
-        if (panelRoot == null) return;
+        RegisterCallback<AttachToPanelEvent>(OnAttachToPanel);
+    }
 
-        // Tìm các thành phần con bên trong root của Panel này
-        _marker = panelRoot.Q<VisualElement>("Marker");
-        _panel = panelRoot.Q<VisualElement>("InfoPanel");
-        _statusLabel = panelRoot.Q<Label>(className: "description-text");
-        _btnClose = panelRoot.Q<Button>("BtnClose");
+    private void OnAttachToPanel(AttachToPanelEvent evt)
+    {
+        _marker = this.Q<VisualElement>("Marker");
+        _panel = this.Q<VisualElement>("InfoPanel");
+        _statusLabel = this.Q<Label>(className: "description-text");
+        _btnClose = this.Q<Button>("BtnClose");
 
-        // --- ĐĂNG KÝ LOGIC SỰ KIỆN ---
-
-        // 1. Hover vào Marker thì hiện Panel
-        _marker?.RegisterCallback<MouseEnterEvent>(e => ShowPanel());
-
-        // 2. Click vào Marker thì Toggle (Bật/Tắt) Panel
-        _marker?.RegisterCallback<ClickEvent>(e => TogglePanel());
-
-        // 3. Click nút Đóng thì ẩn Panel
-        if (_btnClose != null)
+        if (_marker != null)
         {
-            _btnClose.clicked += HidePanel;
+            _marker.RegisterCallback<MouseEnterEvent>(e => ShowPanel());
+            _marker.RegisterCallback<ClickEvent>(e => TogglePanel());
         }
 
-        // Mặc định ẩn khi mới vào game
-        HidePanel();
+        if (_btnClose != null) _btnClose.clicked += HidePanel;
+
+        // CHỈ ẨN PANEL KHI GAME ĐANG CHẠY
+        // Trong UI Builder (Editor), điều kiện này sẽ sai nên HidePanel() không bị gọi
+        if (Application.isPlaying)
+        {
+            HidePanel();
+        }
     }
 
-    public void UpdateStatus(string status)
-    {
-        if (_statusLabel != null)
-            _statusLabel.text = $"Trạng thái: {status}";
-    }
-
+    private void ShowPanel() => _panel?.RemoveFromClassList(HIDDEN_CLASS);
+    private void HidePanel() => _panel?.AddToClassList(HIDDEN_CLASS);
+    
     private void TogglePanel()
     {
         if (_panel == null) return;
         if (_panel.ClassListContains(HIDDEN_CLASS)) ShowPanel();
         else HidePanel();
     }
-
-    private void ShowPanel() => _panel?.RemoveFromClassList(HIDDEN_CLASS);
-    private void HidePanel() => _panel?.AddToClassList(HIDDEN_CLASS);
 }

@@ -16,12 +16,12 @@ MonoBehaviour:
   isMainQuest: 1
   questId: door_main
   title: Door Experiment
-  description: Experiment with different push positions and learn why a door opens
-    easiest at the handle.
+  description: "Th\xED nghi\u1EC7m n\xE0y kh\u1EA3o s\xE1t t\xE1c d\u1EE5ng l\xE0m
+    quay c\u1EE7a l\u1EF1c l\xEAn c\xE1nh c\u1EEDa, ch\u1EE9ng minh r\u1EB1ng m\xF4men
+    l\u1EF1c ch\u1EC9 \u0111\u01B0\u1EE3c t\u1EA1o ra khi gi\xE1 c\u1EE7a l\u1EF1c
+    kh\xF4ng song song v\xE0 kh\xF4ng c\u1EAFt tr\u1EE5c quay."
   objectives:
-  - {fileID: 11400000, guid: 79a0fa203925c594e9cedc8327dcee88, type: 2}
-  - {fileID: 11400000, guid: bd9ab84e68c65974b8114048ec38f2ec, type: 2}
-  - {fileID: 11400000, guid: abacff02cb8085b429cdebc9f3b4c76e, type: 2}
+  - {fileID: 11400000, guid: 8ec56a3ee57111243affc3830bedcf50, type: 2}
   completionReward:
     knowledgePoints: 0
     message: 
