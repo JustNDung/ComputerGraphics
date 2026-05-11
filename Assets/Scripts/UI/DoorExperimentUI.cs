@@ -4,13 +4,13 @@ using MessageDispatcher.AllMessages;
 using UI.UI;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 namespace UI
 {
     public class DoorExperimentUI : ExperimentUI
     {
-        [SerializeField] private Image hingePoint;
-        [SerializeField] private Image handlePoint;
+        [SerializeField] private UIDocument doorExperimentUI;
         
         private void OnEnable()
         {
@@ -27,16 +27,14 @@ namespace UI
         public override void Show(IMessage message)
         {
             if (message is not DoorExperimentUIDisplayMessage msg) return;
-            hingePoint.gameObject.GetComponent<CinematicUIAnimator>().PlayShow();
-            handlePoint.gameObject.GetComponent<CinematicUIAnimator>().PlayShow();
+            doorExperimentUI.enabled = true;
         }
         
 
         public override void Hide(IMessage message)
         {
             if (message is not DoorExperimentUIHideMessage msg) return;
-            hingePoint.gameObject.GetComponent<CinematicUIAnimator>().PlayHide();
-            handlePoint.gameObject.GetComponent<CinematicUIAnimator>().PlayHide();
+            doorExperimentUI.enabled = false;
         }
     }
 }

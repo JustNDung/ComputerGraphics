@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf21540be79a48abb77c5c20f8eacff9, type: 3}
+  m_Name: DoorAnswer
+  m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.DoorExperiment.DoorAnswerObjective
+  description: 
+  targetAmount: 1
+  requiredActionId: door_right_answer
