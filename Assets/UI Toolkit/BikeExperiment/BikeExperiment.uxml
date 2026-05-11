@@ -1,0 +1,34 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
+    <Style src="project://database/Assets/UI%20Toolkit/Vector/VectorStyle.uss?fileID=7433441132597879392&amp;guid=b705f7fbf12710f4b90a8cbc757d16ef&amp;type=3#VectorStyle"/>
+    <ui:VisualElement name="VisualElement" class="root-container" style="top: 386px; right: 239px; height: 312px; width: 416px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 241px; left: -644px;">
+            <ui:VisualElement class="marker-dot"/>
+            <ui:Label text="A" style="top: -24px; left: -16px; -unity-font-style: bold; font-size: 16px;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 264px; left: -765px; align-self: auto;">
+            <ui:Label text="Hệ thống đùi đĩa và pê-đan" class="header-title"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Trục quay: Trục giữa của xe (Trục A trong hình).&#10;Lực tác dụng: Lực đẩy của bàn chân người đạp lên pê-đan.&#10;Lực cản: Lực căng của dây xích cản lại chuyển động quay.&#10;Loại đòn bẩy: Là dạng biến thể của đòn bẩy loại 1 (cơ cấu bánh xe - trục). Lực tác dụng ở xa trục quay (cánh tay đòn dài), giúp con người dùng lực nhẹ ở chân để tạo ra lực kéo xích lớn hơn." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="VisualElement" class="root-container" style="top: -191px; right: 154px; height: 326px; width: 479px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 810px; left: -516px;">
+            <ui:VisualElement class="marker-dot"/>
+            <ui:Label text="B" style="font-size: 16px; -unity-font-style: bold; top: 3px; left: -14px;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 478px; left: -83px; align-self: auto;">
+            <ui:Label text="Hệ thống líp và bánh xe sau" class="header-title"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Trục quay: Trục bánh sau (Trục B trong hình).&#10;Lực tác dụng: Lực kéo của dây xích lên các răng của líp.&#10;Lực cản: Lực ma sát và lực cản của mặt đường tác dụng lên lốp xe.&#10;Loại đòn bẩy: Đòn bẩy loại 3. Lực tác dụng (ở líp) nằm gần trục quay hơn so với lực cản (ở mép lốp xe). Đòn bẩy này &quot;thiệt&quot; về lực (cần lực kéo xích lớn) nhưng lại &quot;lợi&quot; về đường đi, giúp bánh xe quay được vòng lớn và xe đi nhanh hơn." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

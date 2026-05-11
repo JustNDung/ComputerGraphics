@@ -1,0 +1,46 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
+    <Style src="project://database/Assets/UI%20Toolkit/ForceVector/ForceVector.uss?fileID=7433441132597879392&amp;guid=86b68e4863dd60045b9c8c6c95c0e0b6&amp;type=3#ForceVector"/>
+    <Style src="project://database/Assets/UI%20Toolkit/Vector/VectorStyle.uss?fileID=7433441132597879392&amp;guid=b705f7fbf12710f4b90a8cbc757d16ef&amp;type=3#VectorStyle"/>
+    <ui:VisualElement name="VisualElement" class="root-container" style="top: -199px; right: 253px; height: 218px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 380px; left: -651px; width: auto; height: auto;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 374px; left: -113px; align-self: auto; height: 197px; width: 406px;">
+            <ui:Label text="Đòn bẩy loại 1 trong cơ thể người" class="header-title"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Đầu là đòn bẩy loại 1 với trục quay là đốt sống trên cùng. Trọng lượng đầu được chia hai bên trục quay giúp đầu ở trạng thái cân bằng. Lực tác dụng giúp đầu có thể quay quanh đốt sống là nhờ hệ thống cơ sau gáy" class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary" style="left: -39px;"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary" style="left: -32px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 373px; left: 863px; rotate: 90deg;">
+        <ui:VisualElement name="force-vector-line" class="force-vector-line"/>
+        <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
+        <ui:Label name="force-vector-label" text="F1" class="force-vector-label"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 286px; rotate: 90deg; left: 1038px;">
+        <ui:VisualElement name="force-vector-line" class="force-vector-line"/>
+        <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
+        <ui:Label name="force-vector-label" text="F2" class="force-vector-label"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="handle-start" class="vector-handle" style="top: 383px; left: 862px;">
+        <ui:Label text="O1" style="top: -33px; left: -6px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="handle-start" class="vector-handle" style="top: 297px; left: 1037px;">
+        <ui:Label text="O2" style="top: -33px; left: -6px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="handle-start" class="vector-handle" style="top: 339px; left: 964px;">
+        <ui:Label text="O" style="top: -33px; left: -3px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="vector-container" class="vector-container" style="top: 524px; left: 864px;">
+        <ui:VisualElement name="line" class="vector-line" style="width: 172px;"/>
+        <ui:Label text="d2" style="top: -31px; left: 131px;"/>
+        <ui:Label text="d1" style="top: -61px; left: 44px;"/>
+        <ui:VisualElement name="handle-start" class="vector-handle"/>
+        <ui:VisualElement name="handle-end" class="vector-handle" style="top: 1px; left: 175px;"/>
+        <ui:VisualElement name="handle-end" class="vector-handle" style="top: 1px; left: 103px;"/>
+    </ui:VisualElement>
+</ui:UXML>

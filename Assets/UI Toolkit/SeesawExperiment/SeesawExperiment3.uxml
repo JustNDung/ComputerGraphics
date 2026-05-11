@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
     <Style src="project://database/Assets/UI%20Toolkit/ForceVector/ForceVector.uss?fileID=7433441132597879392&amp;guid=86b68e4863dd60045b9c8c6c95c0e0b6&amp;type=3#ForceVector"/>
     <Style src="project://database/Assets/UI%20Toolkit/Vector/VectorStyle.uss?fileID=7433441132597879392&amp;guid=b705f7fbf12710f4b90a8cbc757d16ef&amp;type=3#VectorStyle"/>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 428px; right: 253px; height: 218px; left: -528px;">
+    <ui:VisualElement name="VisualElement" class="root-container" style="top: 403px; right: 253px; height: 258px; left: -584px;">
         <ui:VisualElement name="Marker" class="marker-base" style="top: 380px; left: -1041px; width: auto; height: auto;">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
