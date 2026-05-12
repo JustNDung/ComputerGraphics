@@ -822,7 +822,7 @@ Transform:
   m_GameObject: {fileID: 56698464}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.36, y: 0.57, z: -0.69314754}
+  m_LocalPosition: {x: 34.36, y: 0.57, z: 15.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 999
   OutputChannel: 1
   StandbyUpdate: 2
@@ -1967,7 +1967,7 @@ Transform:
   m_GameObject: {fileID: 403300303}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.13, y: 0, z: 24.13}
+  m_LocalPosition: {x: 35.12, y: 0, z: 33.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2522,12 +2522,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 618942697}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3162511280152137170, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4242618171539513898, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 668263120}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0a14cfc52691a74daa4a49ed7ddbe58, type: 3}
 --- !u!4 &493791306 stripped
@@ -3636,84 +3632,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.030595917, y: 0.1515925, z: 0.0060270787}
   m_Center: {x: -9.313228e-10, y: -0.0029689863, z: 0}
---- !u!1001 &668263119
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 493791306}
-    m_Modifications:
-    - target: {fileID: -8966816352705959860, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_Name
-      value: Hammer
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -25.52306
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.59
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.32263565
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 3150474306388093854, guid: c35c0e001be9f424a9556978643f035a, type: 3}
---- !u!4 &668263120 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -6376883946166045937, guid: c35c0e001be9f424a9556978643f035a, type: 3}
-  m_PrefabInstance: {fileID: 668263119}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &669293368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3909,7 +3827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &686208927
 Transform:
   m_ObjectHideFlags: 0
@@ -4486,6 +4404,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 883655312}
     m_Modifications:
+    - target: {fileID: 413576986791888268, guid: 98f1fdd0d014a88469350c1e9d54d4e2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2312532105255084719, guid: 98f1fdd0d014a88469350c1e9d54d4e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.04541
@@ -4646,7 +4568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 999
   OutputChannel: 1
   StandbyUpdate: 2
@@ -5745,7 +5667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c921ae01076a43cb8c6a978514dc2d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerZone.TriggerZone
-  zoneType: 10
+  zoneType: 17
 --- !u!114 &1117666857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5762,7 +5684,7 @@ MonoBehaviour:
   exploreCam: {fileID: 478242933}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
-  zoneType: 10
+  zoneType: 17
 --- !u!65 &1117666858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5782,8 +5704,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.899372, y: 3.1451266, z: 3.0741062}
-  m_Center: {x: 0.35707664, y: 1.0725633, z: 0.18762493}
+  m_Size: {x: 5.899372, y: 3.1451266, z: 3.9924355}
+  m_Center: {x: 0.35707664, y: 1.0725633, z: -0.2715397}
 --- !u!1 &1124575932
 GameObject:
   m_ObjectHideFlags: 0
@@ -5949,6 +5871,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518141432961212477, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427986084172930154, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7427986084172930154, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
@@ -6352,7 +6278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 999
   OutputChannel: 1
   StandbyUpdate: 2
@@ -7011,6 +6937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeverExperimentUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7427986084172930154, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7027,7 +6957,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1461477104}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -7043,6 +6973,10 @@ PrefabInstance:
     - target: {fileID: 759463754174543865, guid: a70a9dcaf3d5933418fc978125201136, type: 3}
       propertyPath: m_Name
       value: HammerExperimentUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987441237029443506, guid: a70a9dcaf3d5933418fc978125201136, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6638498715185653548, guid: a70a9dcaf3d5933418fc978125201136, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7100,7 +7034,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1486137355}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -7113,6 +7047,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 883655312}
     m_Modifications:
+    - target: {fileID: 434686075189864344, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 434686075189864344, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
       propertyPath: sourceAsset
       value: 
@@ -7206,7 +7144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 999
   OutputChannel: 1
   StandbyUpdate: 2
@@ -7278,7 +7216,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1541337884}
   - component: {fileID: 1541337885}
-  - component: {fileID: 1541337886}
   m_Layer: 0
   m_Name: DoorExperimentUI
   m_TagString: Untagged
@@ -7308,7 +7245,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541337883}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -7324,19 +7261,6 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
---- !u!114 &1541337886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541337883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c51f8cd9187455383109f18e918f81b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI.DoorExperimentUI
-  doorExperimentUI: {fileID: 1541337885}
 --- !u!1 &1545302065
 GameObject:
   m_ObjectHideFlags: 0
@@ -7448,7 +7372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 999
   OutputChannel: 1
   StandbyUpdate: 2
@@ -7707,7 +7631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c921ae01076a43cb8c6a978514dc2d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerZone.TriggerZone
-  zoneType: 8
+  zoneType: 13
 --- !u!114 &1556349837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7724,7 +7648,7 @@ MonoBehaviour:
   exploreCam: {fileID: 478242933}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
-  zoneType: 8
+  zoneType: 13
 --- !u!65 &1556349838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7744,15 +7668,15 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.899372, y: 3.1451266, z: 3.0741062}
-  m_Center: {x: 0.35707664, y: 1.0725633, z: 0.18762493}
+  m_Size: {x: 5.899372, y: 3.1451266, z: 4.022545}
+  m_Center: {x: 0.35707664, y: 1.0725633, z: -0.2865944}
 --- !u!114 &1559628124 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7427986084172930154, guid: b7b34ffaf81e90444bde463ca5c376e9, type: 3}
   m_PrefabInstance: {fileID: 1227970804}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -9172,6 +9096,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 883655312}
     m_Modifications:
     - target: {fileID: 434686075189864344, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434686075189864344, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
       propertyPath: sourceAsset
       value: 
       objectReference: {fileID: 9197481963319205126, guid: 5f10e56da63a77643994f0681165ba11, type: 3}
@@ -9455,8 +9383,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.899372, y: 3.1451266, z: 3.0741062}
-  m_Center: {x: 0.35707664, y: 1.0725633, z: 0.18762493}
+  m_Size: {x: 5.899372, y: 3.1451266, z: 3.9973392}
+  m_Center: {x: 0.35707664, y: 1.0725633, z: -0.27399158}
 --- !u!114 &1817560363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9600,7 +9528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c921ae01076a43cb8c6a978514dc2d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerZone.TriggerZone
-  zoneType: 8
+  zoneType: 16
 --- !u!114 &1829411646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9617,7 +9545,7 @@ MonoBehaviour:
   exploreCam: {fileID: 478242933}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
-  zoneType: 8
+  zoneType: 16
 --- !u!65 &1829411647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9873,7 +9801,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 796121659}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -10608,6 +10536,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 883655312}
     m_Modifications:
     - target: {fileID: 434686075189864344, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 434686075189864344, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
       propertyPath: sourceAsset
       value: 
       objectReference: {fileID: 9197481963319205126, guid: 7ceaf4bdba302214398def51884bc31c, type: 3}
@@ -10729,7 +10661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2074579789
 Transform:
   m_ObjectHideFlags: 0
@@ -10894,7 +10826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 999
   OutputChannel: 1
   StandbyUpdate: 2
@@ -10986,7 +10918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 999
   OutputChannel: 1
   StandbyUpdate: 2
@@ -11106,7 +11038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 999
   OutputChannel: 1
   StandbyUpdate: 2
@@ -11225,7 +11157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c921ae01076a43cb8c6a978514dc2d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerZone.TriggerZone
-  zoneType: 8
+  zoneType: 11
 --- !u!4 &1470767624062912841
 Transform:
   m_ObjectHideFlags: 0
@@ -11235,7 +11167,7 @@ Transform:
   m_GameObject: {fileID: 1255695057543507079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.57, y: -1.29, z: 27.27}
+  m_LocalPosition: {x: 61.57, y: -1.29, z: 33.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11537,7 +11469,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 8722083683285972226}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -11923,7 +11855,7 @@ Transform:
   m_GameObject: {fileID: 1235715619516712561}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.57, y: 0, z: 27.27}
+  m_LocalPosition: {x: 61.57, y: 0, z: 31.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12064,8 +11996,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.899372, y: 3.1451266, z: 3.0741062}
-  m_Center: {x: 0.35707664, y: 1.0725633, z: 0.18762493}
+  m_Size: {x: 5.899372, y: 3.1451266, z: 3.9688206}
+  m_Center: {x: 0.35707664, y: 1.0725633, z: 1.5487337}
 --- !u!114 &3323258538968821425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12327,6 +12259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 883655312}
     m_Modifications:
+    - target: {fileID: 1918661806733547891, guid: e556d369f9352a546b280842ea7d079b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2595388777539219902, guid: e556d369f9352a546b280842ea7d079b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.13475
@@ -12455,8 +12391,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.899372, y: 3.1451266, z: 3.0741062}
-  m_Center: {x: 0.35707664, y: 1.0725633, z: 0.18762493}
+  m_Size: {x: 5.899372, y: 3.1451266, z: 4.00749}
+  m_Center: {x: 0.35707664, y: 1.0725633, z: -0.27906704}
 --- !u!114 &5293635912812234508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13061,6 +12997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeesawExperimentUI1
       objectReference: {fileID: 0}
+    - target: {fileID: 6204128623428069621, guid: e71a7ac371c55f343963c23328d3ef3b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13095,7 +13035,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 6547139254828192006}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -13111,7 +13051,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 7714989963117372899}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -13127,7 +13067,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 4625340034382145673}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -13280,7 +13220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c921ae01076a43cb8c6a978514dc2d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerZone.TriggerZone
-  zoneType: 10
+  zoneType: 12
 --- !u!1 &7280473879958617513
 GameObject:
   m_ObjectHideFlags: 0
@@ -13490,7 +13430,7 @@ MonoBehaviour:
   exploreCam: {fileID: 478242933}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
-  zoneType: 10
+  zoneType: 12
 --- !u!1001 &7714989963117372899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13499,6 +13439,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 883655312}
     m_Modifications:
+    - target: {fileID: 4261745190676053333, guid: 55229d43dc5e3b843bf60c2306aa4ab8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5073766140106664447, guid: 55229d43dc5e3b843bf60c2306aa4ab8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.13475
@@ -13567,8 +13511,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.899372, y: 3.1451266, z: 3.0741062}
-  m_Center: {x: 0.35707664, y: 1.0725633, z: 0.18762493}
+  m_Size: {x: 5.899372, y: 3.1451266, z: 3.9924355}
+  m_Center: {x: 0.35707664, y: 1.0725633, z: -0.2715397}
 --- !u!114 &7864039850341430205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13638,7 +13582,7 @@ MonoBehaviour:
   exploreCam: {fileID: 478242933}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
-  zoneType: 8
+  zoneType: 11
 --- !u!65 &8078661645854618563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13658,8 +13602,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.899372, y: 3.1451266, z: 3.0741062}
-  m_Center: {x: 0.35707664, y: 1.0725633, z: 0.18762493}
+  m_Size: {x: 5.899372, y: 3.1451266, z: 3.9924355}
+  m_Center: {x: 0.35707664, y: 1.0725633, z: -0.2715397}
 --- !u!1 &8094213465614842881
 GameObject:
   m_ObjectHideFlags: 0
@@ -13730,6 +13674,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 883655312}
     m_Modifications:
+    - target: {fileID: 434686075189864344, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5883653769885226365, guid: 3f94ef5e3a163454293258e7eedc9fad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.13475
@@ -13814,7 +13762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 1
+    Enabled: 0
     m_Value: 999
   OutputChannel: 1
   StandbyUpdate: 2
