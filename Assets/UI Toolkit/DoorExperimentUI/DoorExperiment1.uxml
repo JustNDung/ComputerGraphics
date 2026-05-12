@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
     <Style src="project://database/Assets/UI%20Toolkit/ForceVector/ForceVector.uss?fileID=7433441132597879392&amp;guid=86b68e4863dd60045b9c8c6c95c0e0b6&amp;type=3#ForceVector"/>
-    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 640px; left: 934px; rotate: -90deg;">
+    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 635px; left: 957px; rotate: -90deg;">
         <ui:VisualElement name="force-vector-line" class="force-vector-line"/>
         <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
         <ui:Label name="force-vector-label" text="F = 0" class="force-vector-label"/>
@@ -11,51 +11,51 @@
         <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
         <ui:Label name="force-vector-label" text="F = 0" class="force-vector-label"/>
     </ui:VisualElement>
-    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 645px; left: 359px; rotate: -27deg;">
+    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 638px; left: 372px; rotate: -27deg;">
         <ui:VisualElement name="force-vector-line" class="force-vector-line"/>
         <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
         <ui:Label name="force-vector-label" text="F = 0" class="force-vector-label"/>
     </ui:VisualElement>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 31px; right: 1349px;">
-        <ui:VisualElement name="Marker" class="marker-base" style="top: 267px; left: -175px; right: auto;">
+    <MarkerPanelController class="root-container" style="top: 97px; right: 1350px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 324px; left: -169px;">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
-        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 5px; left: -5px;">
-            <ui:Label text="THÔNG TIN HỆ THỐNG" class="header-title"/>
+        <ui:VisualElement name="InfoPanel" class="panel-container">
+            <ui:Label text="Lực tác dụng có giá cắt trục quay" class="header-title"/>
             <ui:VisualElement class="header-line"/>
-            <ui:Label text="Trạng thái: Đang kết nối..." class="description-text"/>
+            <ui:Label text="Không tạo mômen quay vì giá của lực đi qua trục quay, làm cho cánh tay đòn bằng 0 nên vật không có xu hướng quay quanh trục." class="description-text"/>
             <ui:VisualElement class="panel-footer">
                 <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
                 <ui:Button text="XÁC NHẬN" class="btn-primary"/>
             </ui:VisualElement>
         </ui:VisualElement>
-    </ui:VisualElement>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 31px; right: 754px;">
-        <ui:VisualElement name="Marker" class="marker-base" style="top: 267px; left: -175px; right: auto;">
+    </MarkerPanelController>
+    <MarkerPanelController class="root-container" style="right: 768px; top: 97px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 324px; left: -162px;">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
-        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 5px; left: -5px;">
-            <ui:Label text="THÔNG TIN HỆ THỐNG" class="header-title"/>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: -22px;">
+            <ui:Label text="Lực tác dụng có giá song song với trục quay" class="header-title" style="white-space: pre-wrap;"/>
             <ui:VisualElement class="header-line"/>
-            <ui:Label text="Trạng thái: Đang kết nối..." class="description-text"/>
+            <ui:Label text="Không tạo mômen quay vì lực có phương song song với trục quay, không tạo ra tác dụng làm vật quay quanh trục đó." class="description-text"/>
             <ui:VisualElement class="panel-footer">
                 <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
                 <ui:Button text="XÁC NHẬN" class="btn-primary"/>
             </ui:VisualElement>
         </ui:VisualElement>
-    </ui:VisualElement>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 31px; right: 172px;">
-        <ui:VisualElement name="Marker" class="marker-base" style="top: 267px; left: -175px; right: auto;">
+    </MarkerPanelController>
+    <MarkerPanelController class="root-container" style="right: 186px; top: 97px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 324px; left: -173px;">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
-        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 5px; left: -5px;">
-            <ui:Label text="THÔNG TIN HỆ THỐNG" class="header-title"/>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: -34px;">
+            <ui:Label text="Lực tác dụng có giá không song song và không cắt trục quay" class="header-title" style="white-space: pre-wrap;"/>
             <ui:VisualElement class="header-line"/>
-            <ui:Label text="Trạng thái: Đang kết nối..." class="description-text"/>
+            <ui:Label text="Tạo mômen quay vì giá của lực không đi qua trục quay và không song song với trục quay, khi đó lực có cánh tay đòn khác 0 nên làm vật có xu hướng quay quanh trục." class="description-text"/>
             <ui:VisualElement class="panel-footer">
                 <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
                 <ui:Button text="XÁC NHẬN" class="btn-primary"/>
             </ui:VisualElement>
         </ui:VisualElement>
-    </ui:VisualElement>
+    </MarkerPanelController>
 </ui:UXML>

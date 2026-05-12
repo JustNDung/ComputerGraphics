@@ -2,12 +2,31 @@
     <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
     <Style src="project://database/Assets/UI%20Toolkit/ForceVector/ForceVector.uss?fileID=7433441132597879392&amp;guid=86b68e4863dd60045b9c8c6c95c0e0b6&amp;type=3#ForceVector"/>
     <Style src="project://database/Assets/UI%20Toolkit/Vector/VectorStyle.uss?fileID=7433441132597879392&amp;guid=b705f7fbf12710f4b90a8cbc757d16ef&amp;type=3#VectorStyle"/>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 428px; right: 253px; height: 218px;">
-        <ui:VisualElement name="Marker" class="marker-base" style="top: 380px; left: -651px;">
+    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 588px; left: 1312px; rotate: 90deg;">
+        <ui:VisualElement name="force-vector-line" class="force-vector-line"/>
+        <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
+        <ui:Label name="force-vector-label" text="F1" class="force-vector-label"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 588px; rotate: 90deg; left: 604px;">
+        <ui:VisualElement name="force-vector-line" class="force-vector-line"/>
+        <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
+        <ui:Label name="force-vector-label" text="F2" class="force-vector-label"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="handle-start" class="vector-handle" style="top: 570px; left: 603px;">
+        <ui:Label text="O1" style="top: 9px; left: -6px; -unity-font-style: bold;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="handle-start" class="vector-handle" style="top: 571px; left: 1311px;">
+        <ui:Label text="O2" style="top: 7px; left: -6px; -unity-font-style: bold;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="handle-start" class="vector-handle" style="top: 570px; left: 952px;">
+        <ui:Label text="O" style="top: 9px; left: -2px; -unity-font-style: bold;"/>
+    </ui:VisualElement>
+    <MarkerPanelController class="root-container" style="top: 744px; right: 890px;">
+        <ui:VisualElement name="Marker" class="marker-base">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
-        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 374px; left: -113px; align-self: auto;">
-            <ui:Label text="ĐÒN BẨY LOẠI 1" class="header-title"/>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="left: 511px;">
+            <ui:Label text="Đòn bẩy loại 1" class="header-title"/>
             <ui:VisualElement class="header-line"/>
             <ui:Label text="Là loại đòn bẩy có điểm tựa O nằm trong khoảng giữa điểm đặt O1, O2 của các lực F1 và F2." class="description-text"/>
             <ui:VisualElement class="panel-footer">
@@ -15,24 +34,5 @@
                 <ui:Button text="XÁC NHẬN" class="btn-primary"/>
             </ui:VisualElement>
         </ui:VisualElement>
-    </ui:VisualElement>
-    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 660px; left: 1312px; rotate: 90deg;">
-        <ui:VisualElement name="force-vector-line" class="force-vector-line"/>
-        <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
-        <ui:Label name="force-vector-label" text="F1" class="force-vector-label"/>
-    </ui:VisualElement>
-    <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 659px; rotate: 90deg; left: 604px;">
-        <ui:VisualElement name="force-vector-line" class="force-vector-line"/>
-        <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
-        <ui:Label name="force-vector-label" text="F2" class="force-vector-label"/>
-    </ui:VisualElement>
-    <ui:VisualElement name="handle-start" class="vector-handle" style="top: 645px; left: 604px;">
-        <ui:Label text="O1" style="top: -33px; left: -6px;"/>
-    </ui:VisualElement>
-    <ui:VisualElement name="handle-start" class="vector-handle" style="top: 645px; left: 1309px;">
-        <ui:Label text="O2" style="top: -33px; left: -6px;"/>
-    </ui:VisualElement>
-    <ui:VisualElement name="handle-start" class="vector-handle" style="top: 645px; left: 953px;">
-        <ui:Label text="O" style="top: -33px; left: -6px;"/>
-    </ui:VisualElement>
+    </MarkerPanelController>
 </ui:UXML>
