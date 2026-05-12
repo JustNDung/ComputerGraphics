@@ -1,5 +1,4 @@
-﻿
-
+﻿using System;
 using System.Collections.Generic;
 using Reward;
 
@@ -13,6 +12,9 @@ namespace Quest
             new Dictionary<ObjectiveSO, int>();
 
         public bool IsCompleted { get; private set; }
+
+        // NEW
+        public event Action<QuestInstance> OnQuestCompleted;
 
         public QuestInstance(QuestSO quest)
         {
@@ -49,6 +51,9 @@ namespace Quest
             }
 
             IsCompleted = true;
+
+            // NEW
+            OnQuestCompleted?.Invoke(this);
         }
     }
 }

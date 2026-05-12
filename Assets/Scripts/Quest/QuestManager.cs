@@ -1,5 +1,6 @@
 ﻿using Reward;
 using UnityEngine;
+using System;
 using System.Collections.Generic;
 
 namespace Quest
@@ -13,7 +14,10 @@ namespace Quest
         private List<QuestInstance> activeQuests =
             new List<QuestInstance>();
 
-        public System.Action OnQuestUpdated;
+        public Action OnQuestUpdated;
+
+        // NEW
+        public Action<QuestInstance> OnQuestCompleted;
 
         public IReadOnlyList<QuestInstance> ActiveQuests => activeQuests;
 
@@ -27,22 +31,27 @@ namespace Quest
 
         public void AddQuest(QuestSO quest)
         {
-            activeQuests.Add(new QuestInstance(quest));
+            QuestInstance instance = new QuestInstance(quest);
+
+            instance.OnQuestCompleted += HandleQuestCompleted;
+
+            activeQuests.Add(instance);
+
             OnQuestUpdated?.Invoke();
+        }
+
+        private void HandleQuestCompleted(QuestInstance quest)
+        {
+            CompleteQuest(quest);
+
+            OnQuestCompleted?.Invoke(quest);
         }
 
         public void ProcessEvent(RewardEvent e)
         {
             foreach (var quest in activeQuests)
             {
-                bool wasComplete = quest.IsCompleted;
-
                 quest.ProcessEvent(e);
-
-                if (!wasComplete && quest.IsCompleted)
-                {
-                    CompleteQuest(quest);
-                }
             }
 
             OnQuestUpdated?.Invoke();

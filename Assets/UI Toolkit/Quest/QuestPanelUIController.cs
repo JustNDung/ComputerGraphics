@@ -11,7 +11,7 @@ public partial class QuestPanelUIController : VisualElement
 {
     [UxmlAttribute] private float panelWidth = 460f;
     [UxmlAttribute] private float hoverEdge = 24f;
-    [UxmlAttribute] private int animationMs = 240;
+    [UxmlAttribute] private int animationMs = 500;
 
     [Header("Auto Scale With Font")]
     [UxmlAttribute] private int baseFontSize = 14;
@@ -32,6 +32,7 @@ public partial class QuestPanelUIController : VisualElement
     private ScrollView _scroll;
     private Button _openBtn;
     private Button _closeBtn;
+    private Label _questCompletePopup;
 
     private bool _isOpen;
     private ZoneType _currentZone = ZoneType.None;
@@ -69,7 +70,10 @@ public partial class QuestPanelUIController : VisualElement
         MessageDispatcher.MessageDispatcher.Unsubscribe<TriggerZoneExitMessage>(OnZoneExit);
 
         if (QuestManager.Instance != null)
+        {
             QuestManager.Instance.OnQuestUpdated -= RefreshUI;
+            QuestManager.Instance.OnQuestCompleted -= ShowQuestComplete;
+        }
     }
 
     private void SetupUI()
@@ -87,6 +91,60 @@ public partial class QuestPanelUIController : VisualElement
 
         _panel.style.right = -panelWidth;
         _overlay.style.display = DisplayStyle.None;
+        CreateQuestCompletePopup();
+    }
+    
+    private void ShowQuestComplete(QuestInstance quest)
+    {
+        _questCompletePopup.text =
+            "✓ QUEST COMPLETED: " + quest.data.title;
+
+        _questCompletePopup.style.opacity = 1;
+
+        _questCompletePopup.experimental.animation
+            .Start(
+                new StyleValues
+                {
+                    opacity = 0
+                },
+                3000
+            );
+    }
+    
+    private void CreateQuestCompletePopup()
+    {
+        _questCompletePopup = new Label();
+
+        _questCompletePopup.style.position = Position.Absolute;
+        _questCompletePopup.style.top = 80;
+        _questCompletePopup.style.left = Length.Percent(50);
+
+        _questCompletePopup.style.translate =
+            new Translate(new Length(-50, LengthUnit.Percent), 0);
+
+        _questCompletePopup.style.paddingLeft = 24;
+        _questCompletePopup.style.paddingRight = 24;
+        _questCompletePopup.style.paddingTop = 14;
+        _questCompletePopup.style.paddingBottom = 14;
+
+        _questCompletePopup.style.backgroundColor =
+            new Color(0.1f, 0.9f, 0.3f, 0.95f);
+
+        _questCompletePopup.style.color = Color.white;
+
+        _questCompletePopup.style.fontSize = 24;
+
+        _questCompletePopup.style.unityFontStyleAndWeight =
+            FontStyle.Bold;
+
+        _questCompletePopup.style.borderTopLeftRadius = 14;
+        _questCompletePopup.style.borderTopRightRadius = 14;
+        _questCompletePopup.style.borderBottomLeftRadius = 14;
+        _questCompletePopup.style.borderBottomRightRadius = 14;
+
+        _questCompletePopup.style.opacity = 0;
+
+        Add(_questCompletePopup);
     }
 
     private void ApplyTypography()
@@ -139,7 +197,12 @@ public partial class QuestPanelUIController : VisualElement
     private void BindQuestEvents()
     {
         if (QuestManager.Instance != null)
+        {
             QuestManager.Instance.OnQuestUpdated += RefreshUI;
+
+            // NEW
+            QuestManager.Instance.OnQuestCompleted += ShowQuestComplete;
+        }
     }
 
     private void OnZoneEnter(TriggerZoneEnterMessage msg)
@@ -236,9 +299,62 @@ public partial class QuestPanelUIController : VisualElement
     }
     
     // ... (Các hàm CreateCard, RegisterHover, v.v. giữ nguyên như cũ)
+    private VisualElement CreateHeader(
+        QuestInstance quest,
+        bool expanded)
+    {
+        VisualElement row = new VisualElement();
+
+        row.style.flexDirection = FlexDirection.Row;
+        row.style.justifyContent = Justify.SpaceBetween;
+        row.style.alignItems = Align.Center;
+
+        string icon = quest.IsCompleted ? "✓ " :
+            expanded ? "▼ " : "▶ ";
+
+        Label title =
+            new Label(icon + quest.data.title);
+
+        title.style.fontSize = TitleSize;
+        title.style.unityFontStyleAndWeight =
+            FontStyle.Bold;
+
+        title.style.whiteSpace = WhiteSpace.Normal;
+        title.style.flexGrow = 1;
+
+        title.style.color =
+            quest.IsCompleted ? completeColor : textColor;
+
+        if (quest.IsCompleted)
+        {
+            title.style.unityTextOutlineColor =
+                new Color(0.2f, 1f, 0.3f);
+
+            title.style.unityTextOutlineWidth = 1;
+        }
+
+        Label state = new Label(
+            quest.IsCompleted ? "COMPLETED" : "ACTIVE"
+        );
+
+        state.style.fontSize = SmallSize;
+        state.style.marginLeft = 8;
+
+        state.style.color =
+            quest.IsCompleted
+                ? completeColor
+                : dimTextColor;
+
+        row.Add(title);
+        row.Add(state);
+
+        row.RegisterCallback<ClickEvent>(
+            _ => ToggleQuest(quest));
+
+        return row;
+    }
     private VisualElement CreateCard() { /* Giữ nguyên logic của bạn */ VisualElement card = new VisualElement(); card.style.marginBottom = 12; card.style.paddingLeft = 14; card.style.paddingRight = 14; card.style.paddingTop = 12; card.style.paddingBottom = 12; card.style.backgroundColor = cardColor; card.style.borderTopLeftRadius = 10; card.style.borderTopRightRadius = 10; card.style.borderBottomLeftRadius = 10; card.style.borderBottomRightRadius = 10; return card; }
     private void RegisterHover(VisualElement card) { card.RegisterCallback<PointerEnterEvent>(_ => card.style.backgroundColor = cardHoverColor); card.RegisterCallback<PointerLeaveEvent>(_ => card.style.backgroundColor = cardColor); }
-    private VisualElement CreateHeader(QuestInstance quest, bool expanded) { VisualElement row = new VisualElement(); row.style.flexDirection = FlexDirection.Row; row.style.justifyContent = Justify.SpaceBetween; row.style.alignItems = Align.Center; Label title = new Label((expanded ? "▼ " : "▶ ") + quest.data.title); title.style.fontSize = TitleSize; title.style.unityFontStyleAndWeight = FontStyle.Bold; title.style.whiteSpace = WhiteSpace.Normal; title.style.flexGrow = 1; title.style.color = quest.IsCompleted ? completeColor : textColor; Label state = new Label(quest.IsCompleted ? "DONE" : "ACTIVE"); state.style.fontSize = SmallSize; state.style.marginLeft = 8; state.style.color = quest.IsCompleted ? completeColor : dimTextColor; row.Add(title); row.Add(state); row.RegisterCallback<ClickEvent>(_ => ToggleQuest(quest)); return row; }
     private void ToggleQuest(QuestInstance quest) { _expandedQuest = (_expandedQuest == quest) ? null : quest; RefreshUI(); }
     private void DrawProgressBar(VisualElement parent, QuestInstance quest) { int total = quest.data.objectives.Count; int completed = 0; foreach (var obj in quest.data.objectives) { if (quest.progress[obj] >= obj.targetAmount) completed++; } float ratio = total == 0 ? 0f : (float)completed / total; Label txt = new Label($"{completed}/{total} Objectives"); txt.style.fontSize = SmallSize; txt.style.marginTop = 6; txt.style.color = dimTextColor; parent.Add(txt); VisualElement bg = new VisualElement(); bg.style.height = 6; bg.style.marginTop = 4; bg.style.backgroundColor = new Color(1f, 1f, 1f, 0.08f); bg.style.borderTopLeftRadius = 999; bg.style.borderBottomLeftRadius = 999; VisualElement fill = new VisualElement(); fill.style.height = 6; fill.style.width = Length.Percent(ratio * 100f); fill.style.backgroundColor = quest.IsCompleted ? completeColor : progressColor; fill.style.borderTopLeftRadius = 999; fill.style.borderBottomLeftRadius = 999; bg.Add(fill); parent.Add(bg); }
     private void DrawDescription(VisualElement parent, QuestInstance quest) { if (string.IsNullOrWhiteSpace(quest.data.description)) return; Label desc = new Label(quest.data.description); desc.style.marginTop = 10; desc.style.fontSize = BodySize; desc.style.whiteSpace = WhiteSpace.Normal; desc.style.color = dimTextColor; parent.Add(desc); }
