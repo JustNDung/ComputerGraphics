@@ -1989,6 +1989,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.DoorExperimentUI
   doorExperimentUI: {fileID: 1541337885}
+--- !u!1 &417159240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1235715620609765659, guid: c790ee093accaab48a73e49028181e30, type: 3}
+  m_PrefabInstance: {fileID: 715385788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &442144162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,20 +3993,37 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6411476833012246200, guid: c790ee093accaab48a73e49028181e30, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6763893619268303190, guid: c790ee093accaab48a73e49028181e30, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2645159448847663594, guid: c790ee093accaab48a73e49028181e30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1809763643}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1235715620609765659, guid: c790ee093accaab48a73e49028181e30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 715385790}
   m_SourcePrefab: {fileID: 100100000, guid: c790ee093accaab48a73e49028181e30, type: 3}
 --- !u!4 &715385789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2645159448847663594, guid: c790ee093accaab48a73e49028181e30, type: 3}
   m_PrefabInstance: {fileID: 715385788}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &715385790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417159240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b388c26ca1487fa4c15ae873dc0e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Seesaw3ExperimentUI
+  seesaw3ExperimentUI: {fileID: 6638498714533318358}
 --- !u!1 &717851499
 GameObject:
   m_ObjectHideFlags: 0
@@ -11545,6 +11567,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5073766140106664447, guid: 55229d43dc5e3b843bf60c2306aa4ab8, type: 3}
   m_PrefabInstance: {fileID: 7714989963117372899}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6638498714533318358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4261745190676053333, guid: 55229d43dc5e3b843bf60c2306aa4ab8, type: 3}
+  m_PrefabInstance: {fileID: 7714989963117372899}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
 --- !u!4 &6638498714922573650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2595388777539219902, guid: e556d369f9352a546b280842ea7d079b, type: 3}
