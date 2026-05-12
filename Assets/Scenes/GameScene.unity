@@ -4834,7 +4834,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1112679875}
   - component: {fileID: 1112679876}
-  - component: {fileID: 1112679877}
   m_Layer: 0
   m_Name: QuestPanelUI
   m_TagString: Untagged
@@ -4880,32 +4879,6 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
---- !u!114 &1112679877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112679874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa61108685324adcb26b638bb8d90431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI_Toolkit.Quest.QuestPanelUI
-  panelWidth: 420
-  hoverEdge: 20
-  animationMs: 250
-  uiFont: {fileID: 12800000, guid: 940dbfc7bb5320c408bf09f4d20051ae, type: 3}
-  baseFontSize: 14
-  widthPerFontSize: 22
-  minWidth: 420
-  maxWidth: 760
-  cardColor: {r: 1, g: 1, b: 1, a: 0.06}
-  cardHoverColor: {r: 1, g: 1, b: 1, a: 0.1}
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  dimTextColor: {r: 1, g: 1, b: 1, a: 0.72}
-  completeColor: {r: 0.35, g: 1, b: 0.45, a: 1}
-  progressColor: {r: 0.35, g: 0.75, b: 1, a: 1}
 --- !u!1 &1124575932
 GameObject:
   m_ObjectHideFlags: 0
@@ -7715,7 +7688,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraTrigger
   experimentCam: {fileID: 181900107}
   exploreCam: {fileID: 478242933}
-  experimentUI: {fileID: 1541337886}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
   zoneType: 1
@@ -8170,7 +8142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraTrigger
   experimentCam: {fileID: 1546040726}
   exploreCam: {fileID: 478242933}
-  experimentUI: {fileID: 1124575934}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
   zoneType: 3
@@ -9457,7 +9428,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraTrigger
   experimentCam: {fileID: 8920326482027060145}
   exploreCam: {fileID: 0}
-  experimentUI: {fileID: 0}
   zoomDelay: 0.25
   playerController: {fileID: 0}
   zoneType: 4
@@ -10146,7 +10116,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraTrigger
   experimentCam: {fileID: 1374670929795158962}
   exploreCam: {fileID: 0}
-  experimentUI: {fileID: 0}
   zoomDelay: 0.25
   playerController: {fileID: 0}
   zoneType: 2
@@ -10595,7 +10564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraTrigger
   experimentCam: {fileID: 5030665045558338552}
   exploreCam: {fileID: 478242933}
-  experimentUI: {fileID: 0}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
   zoneType: 6
@@ -11471,7 +11439,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraTrigger
   experimentCam: {fileID: 48119042439631381}
   exploreCam: {fileID: 478242933}
-  experimentUI: {fileID: 0}
   zoomDelay: 0.25
   playerController: {fileID: 618942697}
   zoneType: 5
@@ -11695,7 +11662,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraTrigger
   experimentCam: {fileID: 5293635912812234508}
   exploreCam: {fileID: 0}
-  experimentUI: {fileID: 0}
   zoomDelay: 0.25
   playerController: {fileID: 0}
   zoneType: 10
@@ -11844,7 +11810,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraTrigger
   experimentCam: {fileID: 463141407857859942}
   exploreCam: {fileID: 0}
-  experimentUI: {fileID: 0}
   zoomDelay: 0.25
   playerController: {fileID: 0}
   zoneType: 8
