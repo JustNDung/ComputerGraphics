@@ -1,0 +1,31 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
+    <MarkerPanelController class="root-container" style="top: 702px; right: 1337px;">
+        <ui:VisualElement name="Marker" class="marker-base">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 32px; right: 81px;">
+            <ui:Label text="Mái chèo trong chèo thuyền thường là đòn bẩy loại 1" class="header-title" style="white-space: pre-wrap;"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Điểm tựa: chỗ mái chèo tì vào mạn thuyền hoặc chốt chèo.&#10;Lực tác dụng: lực tay người kéo/đẩy mái chèo.&#10;Vật cản: lực cản của nước tác dụng lên phần bản chèo." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MarkerPanelController>
+    <MarkerPanelController class="root-container" style="top: 300px; right: 26px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 345px; right: 448px;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container">
+            <ui:Label text="Lợi ích" class="header-title"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Giúp người chèo đổi hướng lực và đẩy thuyền tiến về phía trước dễ hơn. Tùy vị trí đặt tay và điểm tựa, mái chèo có thể giúp tăng lực đẩy hoặc tăng quãng đường chuyển động của bản chèo." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MarkerPanelController>
+</ui:UXML>
