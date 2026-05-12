@@ -1,0 +1,31 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
+    <MarkerPanelController class="root-container" style="top: 888px; right: 592px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: -66px; right: 465px;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: -93px; right: -31px;">
+            <ui:Label text="Cần câu cá là đòn bẩy loại 2 không có lợi về lực" class="header-title" style="white-space: pre-wrap;"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Điểm tựa: bàn tay/cổ tay giữ cán cần câu.&#10;Lực tác dụng: lực của tay nâng hoặc kéo cần câu.&#10;Vật cản: con cá ở đầu dây câu." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MarkerPanelController>
+    <MarkerPanelController class="root-container" style="top: 479px; right: 1320px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 352px; right: -188px;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container">
+            <ui:Label text="Lợi ích" class="header-title"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Giúp đưa đầu cần câu chuyển động xa và nhanh hơn, dễ quăng mồi ra xa và điều khiển con cá khi kéo lên. Tuy nhiên, loại đòn bẩy này không lợi về lực, người dùng phải dùng lực khá lớn khi cá nặng." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MarkerPanelController>
+</ui:UXML>
