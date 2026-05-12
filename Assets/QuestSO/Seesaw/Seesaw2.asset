@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d97468e47c44f0b46c4f5fe854bbed, type: 3}
   m_Name: Seesaw2
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.Seesaw.Seesaw2Objective
-  description: 
+  description: Type 2 lever
   targetAmount: 1

@@ -8,7 +8,6 @@ public class CameraTrigger : MonoBehaviour
 {
     public CinemachineCamera experimentCam;
     public CinemachineCamera exploreCam;
-    [SerializeField] private ExperimentUI experimentUI;
 
     [Header("Cinematic Settings")]
     public float zoomDelay = 0.25f; // delay trước khi zoom
@@ -63,7 +62,6 @@ public class CameraTrigger : MonoBehaviour
         _isFocused = true;
         _isTransitioning = false;
         playerController.gameObject.SetActive(false);
-        // experimentUI.gameObject.SetActive(true);
         MessageDispatcher.MessageDispatcher.Publish(new UIDisplayMessage(zoneType));
 
         Debug.Log("Zoom vào thí nghiệm 🎬");
@@ -71,7 +69,6 @@ public class CameraTrigger : MonoBehaviour
 
     void ExitCamera()
     {
-        // experimentUI.gameObject.SetActive(false);
         MessageDispatcher.MessageDispatcher.Publish(new UIHideMessage(zoneType));
         _isTransitioning = true;
 

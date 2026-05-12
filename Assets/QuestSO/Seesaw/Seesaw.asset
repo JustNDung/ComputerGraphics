@@ -15,7 +15,7 @@ MonoBehaviour:
   zoneType: 0
   isMainQuest: 1
   questId: seesaw_main
-  title: Seesaw
+  title: Lever in form of seesaw
   description: Explore all kinds of lever
   objectives:
   - {fileID: 11400000, guid: 8eed1607d4b223f479a99e802677c90d, type: 2}
