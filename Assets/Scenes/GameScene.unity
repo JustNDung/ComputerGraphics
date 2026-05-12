@@ -3906,6 +3906,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 3.612099
       objectReference: {fileID: 0}
+    - target: {fileID: 3602598495649123834, guid: c790ee093accaab48a73e49028181e30, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.89
+      objectReference: {fileID: 0}
     - target: {fileID: 5842105313945318021, guid: c790ee093accaab48a73e49028181e30, type: 3}
       propertyPath: zoneType
       value: 7
@@ -4423,6 +4427,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007410647}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1026105919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 311068815533137833, guid: 3d81e66d37307954e954061e93e7d430, type: 3}
+  m_PrefabInstance: {fileID: 1612357241}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1027363056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7492122715828869552, guid: 5c40a888773ea6b4d90434e6382c6239, type: 3}
@@ -6741,13 +6750,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 311068815533137833, guid: 3d81e66d37307954e954061e93e7d430, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1612357243}
   m_SourcePrefab: {fileID: 100100000, guid: 3d81e66d37307954e954061e93e7d430, type: 3}
 --- !u!4 &1612357242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3605829315332877754, guid: 3d81e66d37307954e954061e93e7d430, type: 3}
   m_PrefabInstance: {fileID: 1612357241}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1612357243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026105919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1616905587
 GameObject:
   m_ObjectHideFlags: 0

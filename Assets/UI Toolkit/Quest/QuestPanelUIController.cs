@@ -75,6 +75,37 @@ public partial class QuestPanelUIController : VisualElement
             QuestManager.Instance.OnQuestCompleted -= ShowQuestComplete;
         }
     }
+    
+    private ZoneType GetMainZoneGroup(ZoneType zone)
+    {
+        switch (zone)
+        {
+            // Nhóm Seesaw
+            case ZoneType.Seesaw1Experiment:
+            case ZoneType.Seesaw2Experiment:
+            case ZoneType.Seesaw3Experiment:
+                return ZoneType.SeesawExperiment;
+
+            // Nhóm Lever
+            case ZoneType.HammerExperiment:
+            case ZoneType.WheelExperiment:
+            case ZoneType.CrowbarExperiment:
+                return ZoneType.LeverExperiment;
+
+            // Nhóm RealWorldLever
+            case ZoneType.FishingRodExperiment:
+            case ZoneType.OarExperiment:
+                return ZoneType.RealWorldLeverExperiment;
+
+            // Nhóm BodyLever
+            case ZoneType.HeadExperiment:
+            case ZoneType.ArmExperiment:
+                return ZoneType.BodyLeverExperiment;
+
+            default:
+                return zone;
+        }
+    }
 
     private void SetupUI()
     {
@@ -227,9 +258,14 @@ public partial class QuestPanelUIController : VisualElement
     {
         if (QuestManager.Instance == null) return;
         _expandedQuest = null;
+    
+        // Lấy zone chính tương ứng với zone hiện tại
+        ZoneType targetMainZone = GetMainZoneGroup(_currentZone);
+
         foreach (var quest in QuestManager.Instance.ActiveQuests)
         {
-            if (quest.data.zoneType == _currentZone)
+            // Tìm quest có zoneType trùng với zone chính đã phân nhóm
+            if (quest.data.zoneType == targetMainZone)
             {
                 _expandedQuest = quest;
                 break;
@@ -274,9 +310,17 @@ public partial class QuestPanelUIController : VisualElement
 
     private bool ShouldShowQuest(QuestInstance quest)
     {
-        // Nếu đang ở trong Zone, chỉ hiện quest của Zone đó. 
-        // Nếu không ở trong Zone, hiện Main Quest.
-        return _currentZone == ZoneType.None ? quest.data.isMainQuest : quest.data.zoneType == _currentZone;
+        // Nếu không ở trong Zone nào, chỉ hiện Main Quest chung
+        if (_currentZone == ZoneType.None)
+        {
+            return quest.data.isMainQuest;
+        }
+
+        // Nếu đang ở trong một Zone, xác định Zone chính của khu vực đó
+        ZoneType targetMainZone = GetMainZoneGroup(_currentZone);
+
+        // Hiển thị quest nếu nó thuộc về nhóm Zone chính đó
+        return quest.data.zoneType == targetMainZone;
     }
 
     private void DrawQuestCard(QuestInstance quest)

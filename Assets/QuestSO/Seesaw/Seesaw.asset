@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e857a7177fad45bda55217c16689da93, type: 3}
   m_Name: Seesaw
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.Seesaw.SeesawQuest
-  zoneType: 0
+  zoneType: 8
   isMainQuest: 1
   questId: seesaw_main
   title: Lever in form of seesaw
-  description: Explore all kinds of lever
+  description: Explore all kinds of lever in the form of seesaw
   objectives:
   - {fileID: 11400000, guid: 8eed1607d4b223f479a99e802677c90d, type: 2}
   - {fileID: 11400000, guid: 261dacefa1b8dce45b09d77214784824, type: 2}
