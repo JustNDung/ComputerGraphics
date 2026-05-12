@@ -13,7 +13,7 @@
         SeesawExperiment,
         CrowbarExperiment,
         HammerExperiment,
-        BikeExperiment,
+        BicycleExperiment,
         HeadExperiment,
         ArmExperiment,
         RealWorldLeverExperiment,

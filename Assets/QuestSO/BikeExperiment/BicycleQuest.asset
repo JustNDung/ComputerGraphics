@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73085921b0c2403daeff3017b7b5bfd6, type: 3}
+  m_Name: BicycleQuest
+  m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.BikeExperiment.BikeQuest
+  zoneType: 11
+  isMainQuest: 1
+  questId: bicycle_quest
+  title: Lever in bicycle
+  description: Explore lever in bicycle
+  objectives:
+  - {fileID: 11400000, guid: e9407fcd681686645bc8ee25cce6e00c, type: 2}
+  completionReward:
+    knowledgePoints: 0
+    message: 

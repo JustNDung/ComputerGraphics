@@ -30,7 +30,7 @@ namespace UI
         public override void Show(IMessage message)
         {
             if (message is not UIDisplayMessage msg) return;
-            if (msg.zoneType != ZoneType.BikeExperiment) return;
+            if (msg.zoneType != ZoneType.BicycleExperiment) return;
             bikeExperimentUI.enabled = true;
         }
         
@@ -38,7 +38,7 @@ namespace UI
         public override void Hide(IMessage message)
         {
             if (message is not UIHideMessage msg) return;
-            if (msg.zoneType != ZoneType.BikeExperiment) return;
+            if (msg.zoneType != ZoneType.BicycleExperiment) return;
             bikeExperimentUI.enabled = false;
         }
     }

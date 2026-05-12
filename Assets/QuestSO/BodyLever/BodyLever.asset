@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65104e26165c48e9aade1c2c8bc3315c, type: 3}
   m_Name: BodyLever
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.BodyLever.BodyLeverQuest
-  zoneType: 13
+  zoneType: 15
   isMainQuest: 1
   questId: body_lever_main
   title: Lever in human body

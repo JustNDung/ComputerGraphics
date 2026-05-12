@@ -59,12 +59,12 @@ namespace Quest
 
         void CompleteQuest(QuestInstance quest)
         {
-            RewardSystem.Instance.ProcessEvent(new RewardEvent
-            {
-                experimentId = "Quest",
-                actionId = quest.data.questId,
-                success = true
-            });
+            // RewardSystem.Instance.ProcessEvent(new RewardEvent
+            // {
+            //     experimentId = "Quest",
+            //     actionId = quest.data.questId,
+            //     success = true
+            // });
 
             Debug.Log("Quest Complete: " + quest.data.title);
         }
