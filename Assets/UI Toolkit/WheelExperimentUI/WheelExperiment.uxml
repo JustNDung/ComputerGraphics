@@ -1,11 +1,16 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
     <Style src="project://database/Assets/UI%20Toolkit/Vector/VectorStyle.uss?fileID=7433441132597879392&amp;guid=b705f7fbf12710f4b90a8cbc757d16ef&amp;type=3#VectorStyle"/>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 453px; right: 443px; height: 264px; width: 383px;">
-        <ui:VisualElement name="Marker" class="marker-base" style="left: -389px; right: 441px; top: 207px;">
+    <ui:VisualElement name="vector-container" class="vector-container" style="top: 215px; left: 1216px; rotate: -25deg;">
+        <ui:VisualElement name="line" class="vector-line" style="width: 414px; top: -3px; left: -1px; height: 5px;"/>
+        <ui:VisualElement name="handle-start" class="vector-handle"/>
+        <ui:VisualElement name="handle-end" class="vector-handle" style="top: -3px; left: 413px;"/>
+    </ui:VisualElement>
+    <MarkerPanelController class="root-container" style="top: 718px; right: 940px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: -57px; left: 109px;">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
-        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 269px; left: -497px; align-self: auto;">
+        <ui:VisualElement name="InfoPanel" class="panel-container">
             <ui:Label text="Điểm tựa" class="header-title"/>
             <ui:VisualElement class="header-line"/>
             <ui:Label text="Là mốc để xác định &quot;cánh tay đòn&quot;: Như chúng ta đã thảo luận ở phần trước, cánh tay đòn ($d$) chính là khoảng cách vuông góc tính từ điểm tựa đến giá của lực. Do đó, việc xác định đúng điểm tựa là bước đầu tiên và bắt buộc để tính toán xem lực tác dụng có hiệu quả đến đâu." class="description-text"/>
@@ -14,12 +19,12 @@
                 <ui:Button text="XÁC NHẬN" class="btn-primary"/>
             </ui:VisualElement>
         </ui:VisualElement>
-    </ui:VisualElement>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 737px; right: -134px; height: 218px;">
-        <ui:VisualElement name="Marker" class="marker-base" style="left: -646px; right: 441px; top: -221px;">
+    </MarkerPanelController>
+    <MarkerPanelController class="root-container" style="top: 625px; right: 164px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: -114px; left: -348px;">
             <ui:VisualElement class="marker-dot"/>
         </ui:VisualElement>
-        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: -107px; left: -297px; align-self: auto;">
+        <ui:VisualElement name="InfoPanel" class="panel-container">
             <ui:Label text="Vai trò của cánh tay đòn" class="header-title"/>
             <ui:VisualElement class="header-line"/>
             <ui:Label text="Cánh tay đòn là yếu tố quyết định mức độ làm quay vật của một lực, được thể hiện qua đại lượng vật lý gọi là Mô-men lực." class="description-text"/>
@@ -28,10 +33,5 @@
                 <ui:Button text="XÁC NHẬN" class="btn-primary"/>
             </ui:VisualElement>
         </ui:VisualElement>
-    </ui:VisualElement>
-    <ui:VisualElement name="vector-container" class="vector-container" style="top: 215px; left: 1216px; rotate: -25deg;">
-        <ui:VisualElement name="line" class="vector-line" style="width: 414px; top: -3px; left: -1px; height: 5px;"/>
-        <ui:VisualElement name="handle-start" class="vector-handle"/>
-        <ui:VisualElement name="handle-end" class="vector-handle" style="top: -3px; left: 413px;"/>
-    </ui:VisualElement>
+    </MarkerPanelController>
 </ui:UXML>

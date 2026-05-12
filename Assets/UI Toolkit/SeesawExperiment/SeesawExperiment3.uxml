@@ -2,20 +2,6 @@
     <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
     <Style src="project://database/Assets/UI%20Toolkit/ForceVector/ForceVector.uss?fileID=7433441132597879392&amp;guid=86b68e4863dd60045b9c8c6c95c0e0b6&amp;type=3#ForceVector"/>
     <Style src="project://database/Assets/UI%20Toolkit/Vector/VectorStyle.uss?fileID=7433441132597879392&amp;guid=b705f7fbf12710f4b90a8cbc757d16ef&amp;type=3#VectorStyle"/>
-    <ui:VisualElement name="VisualElement" class="root-container" style="top: 403px; right: 253px; height: 258px; left: -584px;">
-        <ui:VisualElement name="Marker" class="marker-base" style="top: 380px; left: -1041px; width: auto; height: auto;">
-            <ui:VisualElement class="marker-dot"/>
-        </ui:VisualElement>
-        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 414px; left: -567px; align-self: auto;">
-            <ui:Label text="ĐÒN BẨY LOẠI 2 KHÔNG CHO LỢI&#10;                    VỀ LỰC" class="header-title"/>
-            <ui:VisualElement class="header-line"/>
-            <ui:Label text="Trong thực tế có một số loại đòn bẩy không cho ta lợi về lực. Trong trường hợp này điểm O nằm ngoài khoảng giữa điểm O1, O2 của hai lực, lực tác dụng lên đòn bẩy F2 nằm gần điểm tựa O hơn vị trí của lực F1. Có tài liệu gọi đây là đòn bấy loại 3" class="description-text"/>
-            <ui:VisualElement class="panel-footer">
-                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
-                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
-            </ui:VisualElement>
-        </ui:VisualElement>
-    </ui:VisualElement>
     <ui:VisualElement name="force-vector-container" class="force-vector-container" style="top: 660px; left: 1311px; rotate: 90deg;">
         <ui:VisualElement name="force-vector-line" class="force-vector-line"/>
         <ui:VisualElement name="force-vector-arrow" class="force-vector-arrow"/>
@@ -35,4 +21,18 @@
     <ui:VisualElement name="handle-start" class="vector-handle" style="top: 645px; left: 658px;">
         <ui:Label text="O" style="top: -33px; left: -6px;"/>
     </ui:VisualElement>
+    <MarkerPanelController class="root-container" style="top: 800px; right: 1330px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 18px; left: 39px;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="left: 511px;">
+            <ui:Label text="Đòn bẩy loại 2 không cho lợi về lực" class="header-title"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Trong thực tế có một số loại đòn bẩy không cho ta lợi về lực. Trong trường hợp này điểm O nằm ngoài khoảng giữa điểm O1, O2 của hai lực, lực tác dụng lên đòn bẩy F2 nằm gần điểm tựa O hơn vị trí của lực F1. Có tài liệu gọi đây là đòn bấy loại 3" class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MarkerPanelController>
 </ui:UXML>

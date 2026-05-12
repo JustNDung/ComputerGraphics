@@ -1,0 +1,17 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
+    <MarkerPanelController class="root-container" style="top: 73px; right: 355px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 244px; left: -572px;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container">
+            <ui:Label text="Cánh tay đòn loại 2 trong cơ thể người" class="header-title" style="white-space: pre-wrap;"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Cánh tay là đòn bẩy loại 2. Khi ta cầm một vật nặng trên tay, cơ bắp tay sẽ tạo ra một lực giúp cánh tay nằm cân bằng với trục quay chính là khớp xương ở khuỷu tay" class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MarkerPanelController>
+</ui:UXML>
