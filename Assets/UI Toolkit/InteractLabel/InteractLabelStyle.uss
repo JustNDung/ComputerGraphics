@@ -1,0 +1,23 @@
+/* Căn giữa toàn màn hình */
+.full-screen-center {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Style cho chữ */
+.blinking-text {
+    font-size: 40px;
+    color: white;
+    -webkit-unity-font-style: bold;
+    /* Hiệu ứng chuyển đổi opacity trong 0.6 giây */
+    transition-property: opacity;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+}
+
+/* Trạng thái mờ đi */
+.transparent {
+    opacity: 0;
+}
