@@ -20,5 +20,6 @@
         BodyLeverExperiment,
         FishingRodExperiment,
         OarExperiment,
+        BomExperiment,
     }
 }

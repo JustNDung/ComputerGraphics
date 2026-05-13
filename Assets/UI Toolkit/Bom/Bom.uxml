@@ -1,0 +1,45 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Panel/PanelStyle.uss?fileID=7433441132597879392&amp;guid=4371b5b2c81621242bc382ea26c5ab6f&amp;type=3#PanelStyle"/>
+    <MarkerPanelController class="root-container" style="top: 34px; right: 1521px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 391px; right: -173px;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container">
+            <ui:Label text="Ứng dụng của cánh tay đòn trong máy bơm nước" class="header-title" style="white-space: pre-wrap;"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Trong máy bơm nước bằng tay, đòn bẩy được ứng dụng ở tay cầm/cần bơm.&#10;Khi ta ấn hoặc kéo tay bơm, tay bơm quay quanh điểm tựa là chốt gắn trên thân máy. Lực từ tay người được truyền qua cần bơm để làm pít-tông bên trong xi lanh chuyển động lên xuống, từ đó hút nước từ dưới lên và đẩy nước ra ngoài." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MarkerPanelController>
+    <MarkerPanelController class="root-container" style="right: 223px; top: 30px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 407px; right: 683px;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container">
+            <ui:Label text="Máy bơm nước là đòn bẩy loại 2" class="header-title"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Điểm tựa: chốt quay của tay bơm.&#10;Lực tác dụng: lực tay người ấn hoặc kéo ở đầu cần bơm.&#10;Vật chịu tác dụng: thanh truyền nối với pít-tông trong máy bơm.&#10;Tác dụng của đòn bẩy: giúp người dùng bơm nước dễ hơn, tốn ít lực hơn so với kéo trực tiếp pít-tông." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MarkerPanelController>
+    <MarkerPanelController class="root-container" style="top: 682px; right: 1259px;">
+        <ui:VisualElement name="Marker" class="marker-base" style="top: 92px; right: -271px;">
+            <ui:VisualElement class="marker-dot"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InfoPanel" class="panel-container" style="top: 96px; right: -127px;">
+            <ui:Label text="Lợi ích" class="header-title" style="white-space: pre-wrap;"/>
+            <ui:VisualElement class="header-line"/>
+            <ui:Label text="Vì tay cầm thường dài hơn phần nối với pít-tông nên lực của tay được “khuếch đại”, giúp nâng nước từ giếng hoặc bể lên hiệu quả hơn." class="description-text"/>
+            <ui:VisualElement class="panel-footer">
+                <ui:Button text="ĐÓNG" name="BtnClose" class="btn-secondary"/>
+                <ui:Button text="XÁC NHẬN" class="btn-primary"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MarkerPanelController>
+</ui:UXML>
