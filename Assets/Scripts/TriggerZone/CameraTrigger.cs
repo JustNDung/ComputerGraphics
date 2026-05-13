@@ -158,6 +158,12 @@ public class CameraTrigger : MonoBehaviour
             case ZoneType.BicycleExperiment:
                 BicycleQuestCheck();
                 break;
+            case ZoneType.FishingRodExperiment:
+                FishingQuestCheck();
+                break;
+            case ZoneType.OarExperiment:
+                OarQuestCheck();
+                break;
             
         }
     }
@@ -299,6 +305,34 @@ public class CameraTrigger : MonoBehaviour
         if (QuestManager.Instance != null)
         {
             QuestManager.Instance.ProcessEvent(bicycle);
+        }
+    }
+
+    private void FishingQuestCheck()
+    {
+        RewardEvent fishing = new RewardEvent
+        {
+            experimentId = "real_lever",
+            actionId = "fishing_class_3",
+            success = true
+        };
+        if (QuestManager.Instance != null)
+        {
+            QuestManager.Instance.ProcessEvent(fishing);
+        }
+    }
+
+    private void OarQuestCheck()
+    {
+        RewardEvent oar = new RewardEvent
+        {
+            experimentId = "real_lever",
+            actionId = "oar_class_1",
+            success = true
+        };
+        if (QuestManager.Instance != null)
+        {
+            QuestManager.Instance.ProcessEvent(oar);
         }
     }
 }

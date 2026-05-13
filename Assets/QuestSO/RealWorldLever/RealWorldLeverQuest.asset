@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c40cf9b637c400c81b19bdf90ac1920, type: 3}
   m_Name: RealWorldLeverQuest
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.RealWorldLever.RealWorldLeverQuest
-  zoneType: 12
+  zoneType: 14
   isMainQuest: 1
   questId: real_world_lever_main
   title: Everyday Lever Challenge
