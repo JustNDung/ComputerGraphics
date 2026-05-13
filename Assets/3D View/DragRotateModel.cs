@@ -8,6 +8,7 @@ public class DragRotateModel : MonoBehaviour
     public Transform focusTarget;
     public float focusDistance = 3f;
     public float cameraMoveSpeed = 8f;
+    
 
     [Header("Dark Background")]
     public CanvasGroup darkOverlay;
@@ -16,6 +17,14 @@ public class DragRotateModel : MonoBehaviour
 
     [Header("Rotate")]
     public float rotateSpeed = 0.4f;
+
+    [Header("Focus Layer")]
+    public bool changeLayerOnFocus = true;
+    public string focusLayerName = "FocusModel";
+
+    private Transform[] layerTargets;
+    private int[] originalLayers;
+    private int focusLayerIndex = -1;
 
     private bool isDragging = false;
     private bool isFocusing = false;
@@ -42,7 +51,6 @@ public class DragRotateModel : MonoBehaviour
 
     void Start()
     {
-        
         if (targetCamera == null)
         {
             targetCamera = Camera.main;
@@ -57,6 +65,7 @@ public class DragRotateModel : MonoBehaviour
         {
             darkOverlay.alpha = 0f;
         }
+
         originalModelRotation = transform.rotation;
 
         originalActiveStates = new bool[objectsToHideOnFocus.Length];
@@ -67,6 +76,17 @@ public class DragRotateModel : MonoBehaviour
             {
                 originalActiveStates[i] = objectsToHideOnFocus[i].activeSelf;
             }
+        }
+
+        // Lưu layer ban đầu của object này và toàn bộ object con
+        CacheOriginalLayers();
+
+        // Lấy index của layer FocusModel
+        focusLayerIndex = LayerMask.NameToLayer(focusLayerName);
+
+        if (focusLayerIndex == -1)
+        {
+            Debug.LogWarning("Không tìm thấy layer: " + focusLayerName + ". Hãy tạo layer này trong Unity trước.");
         }
     }
 
@@ -89,6 +109,7 @@ public class DragRotateModel : MonoBehaviour
                 StartFocusMode();
 
                 isDragging = true;
+                isResettingRotation = false;
                 lastMousePosition = Input.mousePosition;
             }
         }
@@ -120,6 +141,11 @@ public class DragRotateModel : MonoBehaviour
     {
         isFocusing = true;
 
+         Debug.Log("Focus Distance đang dùng = " + focusDistance);
+
+        // Khi giữ chuột phải: chuyển model sang layer FocusModel
+        SetModelFocusLayer(true);
+
         SetObjectsToHideVisible(false);
 
         originalCameraPosition = targetCamera.transform.position;
@@ -140,6 +166,10 @@ public class DragRotateModel : MonoBehaviour
     void StopFocusMode()
     {
         isFocusing = false;
+
+        // Khi nhả chuột phải: trả model về layer ban đầu
+        SetModelFocusLayer(false);
+
         SetObjectsToHideVisible(true);
     }
 
@@ -242,6 +272,38 @@ public class DragRotateModel : MonoBehaviour
             else
             {
                 objectsToHideOnFocus[i].SetActive(false);
+            }
+        }
+    }
+
+    void CacheOriginalLayers()
+    {
+        layerTargets = GetComponentsInChildren<Transform>(true);
+        originalLayers = new int[layerTargets.Length];
+
+        for (int i = 0; i < layerTargets.Length; i++)
+        {
+            originalLayers[i] = layerTargets[i].gameObject.layer;
+        }
+    }
+
+    void SetModelFocusLayer(bool focus)
+    {
+        if (!changeLayerOnFocus) return;
+        if (focusLayerIndex == -1) return;
+        if (layerTargets == null || originalLayers == null) return;
+
+        for (int i = 0; i < layerTargets.Length; i++)
+        {
+            if (layerTargets[i] == null) continue;
+
+            if (focus)
+            {
+                layerTargets[i].gameObject.layer = focusLayerIndex;
+            }
+            else
+            {
+                layerTargets[i].gameObject.layer = originalLayers[i];
             }
         }
     }
