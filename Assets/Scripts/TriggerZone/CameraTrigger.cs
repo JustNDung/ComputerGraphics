@@ -45,6 +45,7 @@ public class CameraTrigger : MonoBehaviour
 
     IEnumerator FocusWithDelay()
     {
+        playerController.gameObject.SetActive(false);
         _isTransitioning = true;
 
         // 👉 delay nhẹ để tạo cinematic feel
@@ -64,7 +65,6 @@ public class CameraTrigger : MonoBehaviour
         
         _isFocused = true;
         _isTransitioning = false;
-        playerController.gameObject.SetActive(false);
         MessageDispatcher.MessageDispatcher.Publish(new UIDisplayMessage(zoneType));
 
         Debug.Log("Zoom vào thí nghiệm 🎬");

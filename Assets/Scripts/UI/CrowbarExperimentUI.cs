@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 namespace UI
 {
-    public class LeverExperimentUI : ExperimentUI
+    public class CrowbarExperimentUI : ExperimentUI
     {
         [SerializeField] private UIDocument leverExperimentUI;
 
@@ -31,7 +31,7 @@ namespace UI
         public override void Show(IMessage message)
         {
             if (message is not UIDisplayMessage msg) return;
-            if (msg.zoneType != ZoneType.LeverExperiment) return;
+            if (msg.zoneType != ZoneType.CrowbarExperiment) return;
             leverExperimentUI.enabled = true;
         }
         
@@ -39,7 +39,7 @@ namespace UI
         public override void Hide(IMessage message)
         {
             if (message is not UIHideMessage msg) return;
-            if (msg.zoneType != ZoneType.LeverExperiment) return;
+            if (msg.zoneType != ZoneType.CrowbarExperiment) return;
             leverExperimentUI.enabled = false;
         }
     }
