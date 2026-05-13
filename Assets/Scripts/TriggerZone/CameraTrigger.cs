@@ -164,6 +164,10 @@ public class CameraTrigger : MonoBehaviour
             case ZoneType.OarExperiment:
                 OarQuestCheck();
                 break;
+            case ZoneType.BomExperiment:
+                PumpCheckQuest();
+                break;
+            
             
         }
     }
@@ -333,6 +337,20 @@ public class CameraTrigger : MonoBehaviour
         if (QuestManager.Instance != null)
         {
             QuestManager.Instance.ProcessEvent(oar);
+        }
+    }
+
+    private void PumpCheckQuest()
+    {
+        RewardEvent pump = new RewardEvent
+        {
+            experimentId = "bom",
+            actionId = "bom_knowledge",
+            success = true
+        };
+        if (QuestManager.Instance != null)
+        {
+            QuestManager.Instance.ProcessEvent(pump);
         }
     }
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e209d4d74cded74cb0cdde654c7ba2f, type: 3}
   m_Name: BomObjective
   m_EditorClassIdentifier: Assembly-CSharp::Quest.SpecificQuests.BomExperiment.BomObjective
-  description: 
+  description: Lever in pump
   targetAmount: 1
